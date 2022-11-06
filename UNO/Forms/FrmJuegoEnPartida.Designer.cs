@@ -35,6 +35,7 @@ namespace Forms
             this.lblJugador3 = new System.Windows.Forms.Label();
             this.lblJugador4 = new System.Windows.Forms.Label();
             this.pbCartaMesa = new System.Windows.Forms.PictureBox();
+            this.lblJugador1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbCartaMesa)).BeginInit();
             this.SuspendLayout();
             // 
@@ -50,9 +51,9 @@ namespace Forms
             // 
             // lblCartaMesa
             // 
-            this.lblCartaMesa.Location = new System.Drawing.Point(680, 113);
+            this.lblCartaMesa.Location = new System.Drawing.Point(455, 81);
             this.lblCartaMesa.Name = "lblCartaMesa";
-            this.lblCartaMesa.Size = new System.Drawing.Size(141, 217);
+            this.lblCartaMesa.Size = new System.Drawing.Size(177, 29);
             this.lblCartaMesa.TabIndex = 1;
             this.lblCartaMesa.Text = "lblCartaMesa";
             // 
@@ -90,12 +91,23 @@ namespace Forms
             this.pbCartaMesa.Size = new System.Drawing.Size(141, 217);
             this.pbCartaMesa.TabIndex = 5;
             this.pbCartaMesa.TabStop = false;
+            this.pbCartaMesa.BackgroundImageChanged += new System.EventHandler(this.pbCartaMesa_BackgroundImageChanged);
+            // 
+            // lblJugador1
+            // 
+            this.lblJugador1.AutoSize = true;
+            this.lblJugador1.Location = new System.Drawing.Point(780, 397);
+            this.lblJugador1.Name = "lblJugador1";
+            this.lblJugador1.Size = new System.Drawing.Size(74, 20);
+            this.lblJugador1.TabIndex = 6;
+            this.lblJugador1.Text = "Jugador 1";
             // 
             // FrmJuegoEnPartida
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1138, 571);
+            this.Controls.Add(this.lblJugador1);
             this.Controls.Add(this.pbCartaMesa);
             this.Controls.Add(this.lblJugador4);
             this.Controls.Add(this.lblJugador3);
@@ -103,6 +115,7 @@ namespace Forms
             this.Controls.Add(this.lblCartaMesa);
             this.Controls.Add(this.ManoCartas);
             this.Name = "FrmJuegoEnPartida";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmJuegoEnPartida";
             this.Load += new System.EventHandler(this.FrmJuegoEnPartida_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbCartaMesa)).EndInit();
@@ -119,5 +132,6 @@ namespace Forms
         private System.Windows.Forms.Label lblJugador3;
         private System.Windows.Forms.Label lblJugador4;
         private System.Windows.Forms.PictureBox pbCartaMesa;
+        private System.Windows.Forms.Label lblJugador1;
     }
 }

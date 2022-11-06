@@ -89,6 +89,17 @@ namespace Biblioteca_de_clases
         {
             cartaMesa.colorCambiado = nuevoColor;
         }
+        public static void cambioColor(Cartas cartaMesa, out Colores colorElegido)
+        {
+            Random random = new();
+            Colores colorRandom;
+
+            colorRandom = (Colores) Enum.GetValues(typeof(Colores)).GetValue(random.Next(1, 5));
+
+            Cartas.cambioColor(cartaMesa, colorRandom);
+
+            colorElegido = colorRandom;
+        }
 
         public override string ToString()
         {

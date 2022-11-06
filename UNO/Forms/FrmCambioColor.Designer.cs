@@ -106,7 +106,9 @@ namespace Forms
             this.Controls.Add(this.btnAmarillo);
             this.Controls.Add(this.btnVerde);
             this.Controls.Add(this.btnRojo);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmCambioColor";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Elegir Color";
             this.ResumeLayout(false);
             this.PerformLayout();
