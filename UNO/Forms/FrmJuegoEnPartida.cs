@@ -76,10 +76,7 @@ namespace Forms
             }
 
             this.lblCartaMesa.Text = cartaMesa.ToString();
-            this.pbCartaMesa.Image = Image.FromFile(mazoDeCartas[9].Imagen);
-
-            
-            
+            this.pbCartaMesa.Image = Image.FromFile(cartaMesa.Imagen);        
         }
 
         private void ManoCartas_Click(object sender, EventArgs e)
@@ -93,7 +90,7 @@ namespace Forms
                     this.user.CartasEnMano.Remove(this.ManoCartas.SelectedItem as Cartas);
                     this.ManoCartas.Items.RemoveAt(this.ManoCartas.SelectedIndex);
                     this.lblCartaMesa.Text = cartaMesa.ToString();
-
+                    this.pbCartaMesa.Image = Image.FromFile(cartaMesa.Imagen);
                     if (this.cartaMesa.Color == Colores.Negro)
                     {
                         frmCambioColor.ShowDialog();
