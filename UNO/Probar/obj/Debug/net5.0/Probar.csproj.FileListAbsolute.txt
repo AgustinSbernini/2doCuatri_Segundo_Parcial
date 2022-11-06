@@ -1,0 +1,25 @@
+C:\Users\flias\source\repos\Laboratorio---Programacion-II\Segundo_Parcial\UNO\Probar\obj\Debug\net5.0\Probar.csproj.AssemblyReference.cache
+C:\Users\flias\source\repos\Laboratorio---Programacion-II\Segundo_Parcial\UNO\Probar\obj\Debug\net5.0\Probar.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\flias\source\repos\Laboratorio---Programacion-II\Segundo_Parcial\UNO\Probar\obj\Debug\net5.0\Probar.AssemblyInfoInputs.cache
+C:\Users\flias\source\repos\Laboratorio---Programacion-II\Segundo_Parcial\UNO\Probar\obj\Debug\net5.0\Probar.AssemblyInfo.cs
+C:\Users\flias\source\repos\Laboratorio---Programacion-II\Segundo_Parcial\UNO\Probar\obj\Debug\net5.0\Probar.csproj.CoreCompileInputs.cache
+C:\Users\flias\source\repos\Laboratorio---Programacion-II\Segundo_Parcial\UNO\Probar\bin\Debug\net5.0\Probar.exe
+C:\Users\flias\source\repos\Laboratorio---Programacion-II\Segundo_Parcial\UNO\Probar\bin\Debug\net5.0\Probar.deps.json
+C:\Users\flias\source\repos\Laboratorio---Programacion-II\Segundo_Parcial\UNO\Probar\bin\Debug\net5.0\Probar.runtimeconfig.json
+C:\Users\flias\source\repos\Laboratorio---Programacion-II\Segundo_Parcial\UNO\Probar\bin\Debug\net5.0\Probar.runtimeconfig.dev.json
+C:\Users\flias\source\repos\Laboratorio---Programacion-II\Segundo_Parcial\UNO\Probar\bin\Debug\net5.0\Probar.dll
+C:\Users\flias\source\repos\Laboratorio---Programacion-II\Segundo_Parcial\UNO\Probar\bin\Debug\net5.0\ref\Probar.dll
+C:\Users\flias\source\repos\Laboratorio---Programacion-II\Segundo_Parcial\UNO\Probar\bin\Debug\net5.0\Probar.pdb
+C:\Users\flias\source\repos\Laboratorio---Programacion-II\Segundo_Parcial\UNO\Probar\bin\Debug\net5.0\System.Data.SqlClient.dll
+C:\Users\flias\source\repos\Laboratorio---Programacion-II\Segundo_Parcial\UNO\Probar\bin\Debug\net5.0\runtimes\win-arm64\native\sni.dll
+C:\Users\flias\source\repos\Laboratorio---Programacion-II\Segundo_Parcial\UNO\Probar\bin\Debug\net5.0\runtimes\win-x64\native\sni.dll
+C:\Users\flias\source\repos\Laboratorio---Programacion-II\Segundo_Parcial\UNO\Probar\bin\Debug\net5.0\runtimes\win-x86\native\sni.dll
+C:\Users\flias\source\repos\Laboratorio---Programacion-II\Segundo_Parcial\UNO\Probar\bin\Debug\net5.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\flias\source\repos\Laboratorio---Programacion-II\Segundo_Parcial\UNO\Probar\bin\Debug\net5.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\flias\source\repos\Laboratorio---Programacion-II\Segundo_Parcial\UNO\Probar\bin\Debug\net5.0\Biblioteca de clases.dll
+C:\Users\flias\source\repos\Laboratorio---Programacion-II\Segundo_Parcial\UNO\Probar\bin\Debug\net5.0\Biblioteca de clases.pdb
+C:\Users\flias\source\repos\Laboratorio---Programacion-II\Segundo_Parcial\UNO\Probar\obj\Debug\net5.0\Probar.csproj.CopyComplete
+C:\Users\flias\source\repos\Laboratorio---Programacion-II\Segundo_Parcial\UNO\Probar\obj\Debug\net5.0\Probar.dll
+C:\Users\flias\source\repos\Laboratorio---Programacion-II\Segundo_Parcial\UNO\Probar\obj\Debug\net5.0\ref\Probar.dll
+C:\Users\flias\source\repos\Laboratorio---Programacion-II\Segundo_Parcial\UNO\Probar\obj\Debug\net5.0\Probar.pdb
+C:\Users\flias\source\repos\Laboratorio---Programacion-II\Segundo_Parcial\UNO\Probar\obj\Debug\net5.0\Probar.genruntimeconfig.cache

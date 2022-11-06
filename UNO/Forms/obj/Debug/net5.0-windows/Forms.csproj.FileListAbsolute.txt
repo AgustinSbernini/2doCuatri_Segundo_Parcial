@@ -1,0 +1,30 @@
+C:\Users\flias\source\repos\Laboratorio---Programacion-II\Segundo_Parcial\UNO\Forms\bin\Debug\net5.0-windows\Forms.exe
+C:\Users\flias\source\repos\Laboratorio---Programacion-II\Segundo_Parcial\UNO\Forms\bin\Debug\net5.0-windows\Forms.deps.json
+C:\Users\flias\source\repos\Laboratorio---Programacion-II\Segundo_Parcial\UNO\Forms\bin\Debug\net5.0-windows\Forms.runtimeconfig.json
+C:\Users\flias\source\repos\Laboratorio---Programacion-II\Segundo_Parcial\UNO\Forms\bin\Debug\net5.0-windows\Forms.runtimeconfig.dev.json
+C:\Users\flias\source\repos\Laboratorio---Programacion-II\Segundo_Parcial\UNO\Forms\bin\Debug\net5.0-windows\Forms.dll
+C:\Users\flias\source\repos\Laboratorio---Programacion-II\Segundo_Parcial\UNO\Forms\bin\Debug\net5.0-windows\ref\Forms.dll
+C:\Users\flias\source\repos\Laboratorio---Programacion-II\Segundo_Parcial\UNO\Forms\bin\Debug\net5.0-windows\Forms.pdb
+C:\Users\flias\source\repos\Laboratorio---Programacion-II\Segundo_Parcial\UNO\Forms\bin\Debug\net5.0-windows\System.Data.SqlClient.dll
+C:\Users\flias\source\repos\Laboratorio---Programacion-II\Segundo_Parcial\UNO\Forms\bin\Debug\net5.0-windows\runtimes\win-arm64\native\sni.dll
+C:\Users\flias\source\repos\Laboratorio---Programacion-II\Segundo_Parcial\UNO\Forms\bin\Debug\net5.0-windows\runtimes\win-x64\native\sni.dll
+C:\Users\flias\source\repos\Laboratorio---Programacion-II\Segundo_Parcial\UNO\Forms\bin\Debug\net5.0-windows\runtimes\win-x86\native\sni.dll
+C:\Users\flias\source\repos\Laboratorio---Programacion-II\Segundo_Parcial\UNO\Forms\bin\Debug\net5.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\flias\source\repos\Laboratorio---Programacion-II\Segundo_Parcial\UNO\Forms\bin\Debug\net5.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\flias\source\repos\Laboratorio---Programacion-II\Segundo_Parcial\UNO\Forms\bin\Debug\net5.0-windows\Biblioteca de clases.dll
+C:\Users\flias\source\repos\Laboratorio---Programacion-II\Segundo_Parcial\UNO\Forms\bin\Debug\net5.0-windows\Biblioteca de clases.pdb
+C:\Users\flias\source\repos\Laboratorio---Programacion-II\Segundo_Parcial\UNO\Forms\obj\Debug\net5.0-windows\Forms.csproj.AssemblyReference.cache
+C:\Users\flias\source\repos\Laboratorio---Programacion-II\Segundo_Parcial\UNO\Forms\obj\Debug\net5.0-windows\Forms.FrmLogin.resources
+C:\Users\flias\source\repos\Laboratorio---Programacion-II\Segundo_Parcial\UNO\Forms\obj\Debug\net5.0-windows\Forms.csproj.GenerateResource.cache
+C:\Users\flias\source\repos\Laboratorio---Programacion-II\Segundo_Parcial\UNO\Forms\obj\Debug\net5.0-windows\Forms.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\flias\source\repos\Laboratorio---Programacion-II\Segundo_Parcial\UNO\Forms\obj\Debug\net5.0-windows\Forms.AssemblyInfoInputs.cache
+C:\Users\flias\source\repos\Laboratorio---Programacion-II\Segundo_Parcial\UNO\Forms\obj\Debug\net5.0-windows\Forms.AssemblyInfo.cs
+C:\Users\flias\source\repos\Laboratorio---Programacion-II\Segundo_Parcial\UNO\Forms\obj\Debug\net5.0-windows\Forms.csproj.CoreCompileInputs.cache
+C:\Users\flias\source\repos\Laboratorio---Programacion-II\Segundo_Parcial\UNO\Forms\obj\Debug\net5.0-windows\Forms.csproj.CopyComplete
+C:\Users\flias\source\repos\Laboratorio---Programacion-II\Segundo_Parcial\UNO\Forms\obj\Debug\net5.0-windows\Forms.dll
+C:\Users\flias\source\repos\Laboratorio---Programacion-II\Segundo_Parcial\UNO\Forms\obj\Debug\net5.0-windows\ref\Forms.dll
+C:\Users\flias\source\repos\Laboratorio---Programacion-II\Segundo_Parcial\UNO\Forms\obj\Debug\net5.0-windows\Forms.pdb
+C:\Users\flias\source\repos\Laboratorio---Programacion-II\Segundo_Parcial\UNO\Forms\obj\Debug\net5.0-windows\Forms.genruntimeconfig.cache
+C:\Users\flias\source\repos\Laboratorio---Programacion-II\Segundo_Parcial\UNO\Forms\obj\Debug\net5.0-windows\Forms.FrmJuegoEnPartida.resources
+C:\Users\flias\source\repos\Laboratorio---Programacion-II\Segundo_Parcial\UNO\Forms\obj\Debug\net5.0-windows\Forms.FrmCambioColor.resources
+C:\Users\flias\source\repos\Laboratorio---Programacion-II\Segundo_Parcial\UNO\Forms\obj\Debug\net5.0-windows\Forms.Properties.Resources.resources

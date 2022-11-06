@@ -1,0 +1,12 @@
+C:\Users\flias\source\repos\Laboratorio---Programacion-II\Segundo_Parcial\UNO\Biblioteca de clases\bin\Debug\net5.0\Biblioteca de clases.deps.json
+C:\Users\flias\source\repos\Laboratorio---Programacion-II\Segundo_Parcial\UNO\Biblioteca de clases\bin\Debug\net5.0\Biblioteca de clases.dll
+C:\Users\flias\source\repos\Laboratorio---Programacion-II\Segundo_Parcial\UNO\Biblioteca de clases\bin\Debug\net5.0\ref\Biblioteca de clases.dll
+C:\Users\flias\source\repos\Laboratorio---Programacion-II\Segundo_Parcial\UNO\Biblioteca de clases\bin\Debug\net5.0\Biblioteca de clases.pdb
+C:\Users\flias\source\repos\Laboratorio---Programacion-II\Segundo_Parcial\UNO\Biblioteca de clases\obj\Debug\net5.0\Biblioteca de clases.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\flias\source\repos\Laboratorio---Programacion-II\Segundo_Parcial\UNO\Biblioteca de clases\obj\Debug\net5.0\Biblioteca de clases.AssemblyInfoInputs.cache
+C:\Users\flias\source\repos\Laboratorio---Programacion-II\Segundo_Parcial\UNO\Biblioteca de clases\obj\Debug\net5.0\Biblioteca de clases.AssemblyInfo.cs
+C:\Users\flias\source\repos\Laboratorio---Programacion-II\Segundo_Parcial\UNO\Biblioteca de clases\obj\Debug\net5.0\Biblioteca de clases.csproj.CoreCompileInputs.cache
+C:\Users\flias\source\repos\Laboratorio---Programacion-II\Segundo_Parcial\UNO\Biblioteca de clases\obj\Debug\net5.0\Biblioteca de clases.dll
+C:\Users\flias\source\repos\Laboratorio---Programacion-II\Segundo_Parcial\UNO\Biblioteca de clases\obj\Debug\net5.0\ref\Biblioteca de clases.dll
+C:\Users\flias\source\repos\Laboratorio---Programacion-II\Segundo_Parcial\UNO\Biblioteca de clases\obj\Debug\net5.0\Biblioteca de clases.pdb
+C:\Users\flias\source\repos\Laboratorio---Programacion-II\Segundo_Parcial\UNO\Biblioteca de clases\obj\Debug\net5.0\Biblioteca de clases.csproj.AssemblyReference.cache
