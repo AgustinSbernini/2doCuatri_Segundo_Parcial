@@ -28,3 +28,4 @@ C:\Users\flias\source\repos\Laboratorio---Programacion-II\Segundo_Parcial\UNO\Fo
 C:\Users\flias\source\repos\Laboratorio---Programacion-II\Segundo_Parcial\UNO\Forms\obj\Debug\net5.0-windows\Forms.FrmJuegoEnPartida.resources
 C:\Users\flias\source\repos\Laboratorio---Programacion-II\Segundo_Parcial\UNO\Forms\obj\Debug\net5.0-windows\Forms.FrmCambioColor.resources
 C:\Users\flias\source\repos\Laboratorio---Programacion-II\Segundo_Parcial\UNO\Forms\obj\Debug\net5.0-windows\Forms.Properties.Resources.resources
+C:\Users\flias\source\repos\Laboratorio---Programacion-II\Segundo_Parcial\UNO\Forms\obj\Debug\net5.0-windows\Forms.FrmMenuPrincipal.resources

@@ -118,166 +118,181 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="7RojoNinguno" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\7RojoNinguno.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="6RojoNinguno" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\6RojoNinguno.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="4RojoNinguno" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\4RojoNinguno.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="8RojoNinguno" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\8RojoNinguno.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="0RojoNinguno" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\0RojoNinguno.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="1RojoNinguno" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\1RojoNinguno.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="9RojoNinguno" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\9RojoNinguno.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="3RojoNinguno" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\3RojoNinguno.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="5RojoNinguno" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\5RojoNinguno.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="2RojoNinguno" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\2RojoNinguno.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="0AmarilloNinguno" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\0AmarilloNinguno.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="0AzulNinguno" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\0AzulNinguno.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="0VerdeNinguno" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\0VerdeNinguno.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Dorso" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Dorso.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="-1AmarilloBloqueo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\-1AmarilloBloqueo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="-1AmarilloCambioSentido" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\-1AmarilloCambioSentido.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="1AmarilloNinguno" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\1AmarilloNinguno.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="-1AmarilloRobaDos" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\-1AmarilloRobaDos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="-1AzulBloqueo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\-1AzulBloqueo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="-1AzulCambioSentido" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\-1AzulCambioSentido.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="1AzulNinguno" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\1AzulNinguno.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="-1AzulRobaDos" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\-1AzulRobaDos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="-1NegroCambioColor" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\-1NegroCambioColor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="-1NegroRobaCuatro" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\-1NegroRobaCuatro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="-1RojoBloqueo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\-1RojoBloqueo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="-1RojoCambioSentido" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\-1RojoCambioSentido.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="-1RojoRobaDos" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\-1RojoRobaDos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="-1VerdeBloqueo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\-1VerdeBloqueo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="-1VerdeCambioSentido" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\-1VerdeCambioSentido.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="1VerdeNinguno" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\1VerdeNinguno.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="-1VerdeRobaDos" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\-1VerdeRobaDos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="2AmarilloNinguno" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\2AmarilloNinguno.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="2AzulNinguno" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\2AzulNinguno.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="2VerdeNinguno" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\2VerdeNinguno.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="3AmarilloNinguno" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\3AmarilloNinguno.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="3AzulNinguno" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\3AzulNinguno.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="3VerdeNinguno" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\3VerdeNinguno.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="4AmarilloNinguno" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\4AmarilloNinguno.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="4AzulNinguno" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\4AzulNinguno.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="4VerdeNinguno" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\4VerdeNinguno.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="5AmarilloNinguno" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\5AmarilloNinguno.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="5AzulNinguno" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\5AzulNinguno.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="5VerdeNinguno" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\5VerdeNinguno.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="6AmarilloNinguno" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\6AmarilloNinguno.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="6AzulNinguno" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\6AzulNinguno.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="6VerdeNinguno" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\6VerdeNinguno.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="7AmarilloNinguno" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\7AmarilloNinguno.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="7AzulNinguno" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\7AzulNinguno.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="7VerdeNinguno" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\7VerdeNinguno.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="8AmarilloNinguno" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\8AmarilloNinguno.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="3VerdeNinguno" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\3VerdeNinguno.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="-1AmarilloRobaDos" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\-1AmarilloRobaDos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="6RojoNinguno" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\6RojoNinguno.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="-1NegroCambioColor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\-1NegroCambioColor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="-1AzulBloqueo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\-1AzulBloqueo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="-1AzulRobaDos" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\-1AzulRobaDos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="8RojoNinguno" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\8RojoNinguno.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="5VerdeNinguno" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\5VerdeNinguno.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="7RojoNinguno" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\7RojoNinguno.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="-1VerdeRobaDos" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\-1VerdeRobaDos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1VerdeNinguno" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1VerdeNinguno.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="5AzulNinguno" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\5AzulNinguno.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="9RojoNinguno" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\9RojoNinguno.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="0VerdeNinguno" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\0VerdeNinguno.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="8AzulNinguno" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\8AzulNinguno.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="8VerdeNinguno" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\8VerdeNinguno.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="-1AmarilloCambioSentido" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\-1AmarilloCambioSentido.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="9AmarilloNinguno" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\9AmarilloNinguno.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="0AzulNinguno" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\0AzulNinguno.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="-1AzulCambioSentido" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\-1AzulCambioSentido.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="4VerdeNinguno" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\4VerdeNinguno.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="4RojoNinguno" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\4RojoNinguno.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="3AmarilloNinguno" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\3AmarilloNinguno.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="0AmarilloNinguno" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\0AmarilloNinguno.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="5RojoNinguno" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\5RojoNinguno.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="-1RojoCambioSentido" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\-1RojoCambioSentido.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="3RojoNinguno" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\3RojoNinguno.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="9AzulNinguno" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\9AzulNinguno.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="7AmarilloNinguno" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\7AmarilloNinguno.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1AzulNinguno" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1AzulNinguno.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="2RojoNinguno" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\2RojoNinguno.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="6AzulNinguno" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\6AzulNinguno.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="-1VerdeBloqueo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\-1VerdeBloqueo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="4AmarilloNinguno" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\4AmarilloNinguno.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="2AzulNinguno" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\2AzulNinguno.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="-1VerdeCambioSentido" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\-1VerdeCambioSentido.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="4AzulNinguno" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\4AzulNinguno.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Mesa" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Mesa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="9VerdeNinguno" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\9VerdeNinguno.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="6VerdeNinguno" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\6VerdeNinguno.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="8VerdeNinguno" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\8VerdeNinguno.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="3AzulNinguno" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\3AzulNinguno.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Tachado" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Tachado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="7VerdeNinguno" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\7VerdeNinguno.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="7AzulNinguno" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\7AzulNinguno.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="6AmarilloNinguno" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\6AmarilloNinguno.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="0RojoNinguno" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\0RojoNinguno.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="5AmarilloNinguno" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\5AmarilloNinguno.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="2AmarilloNinguno" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\2AmarilloNinguno.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="2VerdeNinguno" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\2VerdeNinguno.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="-1RojoBloqueo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\-1RojoBloqueo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="9AmarilloNinguno" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\9AmarilloNinguno.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DorsoJugadores" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DorsoJugadores.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1AmarilloNinguno" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1AmarilloNinguno.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="-1RojoRobaDos" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\-1RojoRobaDos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1RojoNinguno" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1RojoNinguno.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Tachado1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Tachado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

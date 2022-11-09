@@ -23,7 +23,9 @@ namespace Probar
 
         static void Main(string[] args)
         {
-            
+
+
+
             /*
             List<Cartas> mazo = Cartas.MazoDeCartas();
             Usuarios user = new("Agus", "Juan");

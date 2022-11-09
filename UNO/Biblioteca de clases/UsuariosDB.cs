@@ -113,8 +113,10 @@ namespace Biblioteca_de_clases
                         this.command.CommandText = $"INSERT INTO dbo.UsuariosDB (Usuario,Contraseña) VALUES ('{usuario}','{contraseña}')";
                         retorno = this.command.ExecuteNonQuery();
                     }
-
-                    this.reader.Close();
+                    else
+                    {
+                        this.reader.Close();
+                    }
                 }
                 catch (Exception)
                 {
@@ -166,6 +168,5 @@ namespace Biblioteca_de_clases
 
             return retorno;
         }
-
     }
 }

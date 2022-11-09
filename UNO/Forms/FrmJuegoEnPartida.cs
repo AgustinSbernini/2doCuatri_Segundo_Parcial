@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Biblioteca_de_clases;
@@ -41,10 +42,11 @@ namespace Forms
         {
             this.mazoDeCartas = Cartas.MazoDeCartas();
             this.listaJugadores.Add(this.user);
-            this.listaLabelsCartasEnMano.Add(lblJugador1);
-            this.listaLabelsCartasEnMano.Add(lblJugador2);
-            this.listaLabelsCartasEnMano.Add(lblJugador3);
-            this.listaLabelsCartasEnMano.Add(lblJugador4);
+            this.listaLabelsCartasEnMano.Add(lblJugador1TotalCartas);
+            this.listaLabelsCartasEnMano.Add(lblJugador2TotalCartas);
+            this.listaLabelsCartasEnMano.Add(lblJugador3TotalCartas);
+            this.listaLabelsCartasEnMano.Add(lblJugador4TotalCartas);
+            this.lblCartaMesa.Visible = false;
 
             // Crea la cantidad de usuarios necesarios para rellenar la mesa y los guarda en una lista
             for (int i = 0; i < numJugadores - 1; i++)
@@ -68,9 +70,9 @@ namespace Forms
             }
 
             // Arreglar para hacer dinamico. Numero de cartas de cada jugador
-            lblJugador2.Text = listaJugadores[1].CartasEnMano.Count.ToString();
-            lblJugador3.Text = listaJugadores[2].CartasEnMano.Count.ToString();
-            lblJugador4.Text = listaJugadores[3].CartasEnMano.Count.ToString();
+            lblJugador2TotalCartas.Text = listaJugadores[1].CartasEnMano.Count.ToString();
+            lblJugador3TotalCartas.Text = listaJugadores[2].CartasEnMano.Count.ToString();
+            lblJugador4TotalCartas.Text = listaJugadores[3].CartasEnMano.Count.ToString();
 
             // Carta que se juega al medio al inicio de la partida
             this.cartaMesa = Cartas.RepartirCarta(this.mazoDeCartas);
@@ -82,7 +84,7 @@ namespace Forms
 
             this.pbCartaMesa.BackgroundImage = Image.FromFile(cartaMesa.Imagen);
         }
-
+        
         private void ManoCartas_Click(object sender, EventArgs e)
         {
             if(this.ManoCartas.Items.Contains(cartaMesa))
@@ -99,6 +101,7 @@ namespace Forms
                     {
                         frmCambioColor.ShowDialog();
                         Cartas.cambioColor(this.cartaMesa, colorElegido);
+                        this.lblCartaMesa.Visible = true;
                         this.lblCartaMesa.Text = "Color Elegido: " + colorElegido;
                     }          
                 }
@@ -112,6 +115,7 @@ namespace Forms
                     this.ManoCartas.Items.Add(carta);
                 }
             }
+            partidaEnJuego();
         }
 
         public static void cambioColorHecho(Colores color)
@@ -119,106 +123,122 @@ namespace Forms
             colorElegido = color;
         }
 
-        public void turnoBots(bool sentidoHorario)
+        private void partidaEnJuego()
+        {
+            int i = 0;
+            Task task = Task.Run(() =>
+            {
+                while(i != 0)
+                //while (listaJugadores[0].CartasEnMano.Count != 0 && listaJugadores[1].CartasEnMano.Count != 0
+                //    && listaJugadores[2].CartasEnMano.Count != 0 && listaJugadores[3].CartasEnMano.Count != 0)
+                {
+                    Thread.Sleep(1000);
+                    lblContador.Text = "3";
+                    Thread.Sleep(1000);
+                    lblContador.Text = "2";
+                    Thread.Sleep(1000);
+                    lblContador.Text = "1";
+                    i = turnoBots(i); 
+                }
+            });
+        }
+        private int turnoBots(int i)
         {
             Efectos efectoGenerado;
-            int i = 0;
             bool rondaSentidoReloj = true;
-            while(listaJugadores[0].CartasEnMano.Count > 0)
+
+            efectoGenerado = JugarCarta(listaJugadores[i]);
+                
+            listaLabelsCartasEnMano[i].Text = listaJugadores[i].CartasEnMano.Count().ToString();
+
+            if(rondaSentidoReloj)
             {
-                if(i == 0)
+                switch (efectoGenerado)
                 {
-                    efectoGenerado = JugarCarta(listaJugadores[i]); // Corregir esto, await
-                }
-                else
-                {
-                    efectoGenerado = JugarCarta(listaJugadores[i]);
-                }
-                listaLabelsCartasEnMano[i].Text = listaJugadores[i].CartasEnMano.Count().ToString();
+                    case Efectos.RobaDos:
+                        i = ConsultarIndice(i, +1);
+                        Cartas.RepartirCarta(listaJugadores[i], this.mazoDeCartas);
+                        Cartas.RepartirCarta(listaJugadores[i], this.mazoDeCartas);
+                        break;
 
-                if(rondaSentidoReloj)
-                {
-                    switch (efectoGenerado)
-                    {
-                        case Efectos.RobaDos:
-                            i = ConsultarIndice(i, +1);
+                    case Efectos.RobaCuatro:
+                        i = ConsultarIndice(i, +1);
+                        for (int j = 0; j < 3; j++)
+                        {
                             Cartas.RepartirCarta(listaJugadores[i], this.mazoDeCartas);
-                            Cartas.RepartirCarta(listaJugadores[i], this.mazoDeCartas);
-                            break;
+                        }
+                        Cartas.cambioColor(this.cartaMesa, out colorElegido);
+                        this.lblCartaMesa.Visible = true;
+                        this.lblCartaMesa.Text = "Color Elegido: " + colorElegido;
+                        break;
 
-                        case Efectos.RobaCuatro:
-                            i = ConsultarIndice(i, +1);
-                            for (int j = 0; j < 3; j++)
-                            {
-                                Cartas.RepartirCarta(listaJugadores[i], this.mazoDeCartas);
-                            }
-                            Cartas.cambioColor(this.cartaMesa, out colorElegido);
-                            this.lblCartaMesa.Text = "Color Elegido: " + colorElegido;
-                            break;
+                    case Efectos.CambioColor:
+                        Cartas.cambioColor(this.cartaMesa, out colorElegido);
+                        this.lblCartaMesa.Visible = true;
+                        this.lblCartaMesa.Text = "Color Elegido: " + colorElegido;
+                        break;
 
-                        case Efectos.CambioColor:
-                            Cartas.cambioColor(this.cartaMesa, out colorElegido);
-                            this.lblCartaMesa.Text = "Color Elegido: " + colorElegido;
-                            break;
+                    case Efectos.CambioSentido:
+                        rondaSentidoReloj = false;
+                        i = ConsultarIndice(i, -1); // Se le resta dos. Uno para compensar el que se suma despues y
+                        i = ConsultarIndice(i, -1); // otro para que empiece el jugador anterior al que jugó la carta
+                        break;
 
-                        case Efectos.CambioSentido:
-                            rondaSentidoReloj = false;
-                            i = ConsultarIndice(i, -1); // Se le resta dos. Uno para compensar el que se suma despues y
-                            i = ConsultarIndice(i, -1); // otro para que empiece el jugador anterior al que jugó la carta
-                            break;
+                    case Efectos.Bloqueo:
+                        i = ConsultarIndice(i, +1);
+                        break;
 
-                        case Efectos.Bloqueo:
-                            i = ConsultarIndice(i, +1);
-                            break;
-
-                        default:
-                            break;
-                    }
-
-                    i = ConsultarIndice(i, +1);
+                    default:
+                        break;
                 }
-                else
-                {
-                    switch (efectoGenerado)
-                    {
-                        case Efectos.RobaDos:
-                            i = ConsultarIndice(i, -1);
-                            Cartas.RepartirCarta(listaJugadores[i], this.mazoDeCartas);
-                            Cartas.RepartirCarta(listaJugadores[i], this.mazoDeCartas);
-                            break;
 
-                        case Efectos.RobaCuatro:
-                            i = ConsultarIndice(i, -1);
-                            for (int j = 0; j < 3; j++)
-                            {
-                                Cartas.RepartirCarta(listaJugadores[i], this.mazoDeCartas);
-                            }
-                            Cartas.cambioColor(this.cartaMesa, out colorElegido);
-                            this.lblCartaMesa.Text = "Color Elegido: " + colorElegido;
-                            break;
-
-                        case Efectos.CambioColor:
-                            Cartas.cambioColor(this.cartaMesa, out colorElegido);
-                            this.lblCartaMesa.Text = "Color Elegido: " + colorElegido;
-                            break;
-
-                        case Efectos.CambioSentido:
-                            rondaSentidoReloj = true;
-                            i = ConsultarIndice(i, +1); // Se le resta dos. Uno para compensar el que se suma despues y
-                            i = ConsultarIndice(i, +1); // otro para que empiece el jugador anterior al que jugó la carta
-                            break;
-
-                        case Efectos.Bloqueo:
-                            i = ConsultarIndice(i, -1);
-                            break;
-
-                        default:
-                            break;
-                    }
-
-                    i = ConsultarIndice(i, -1);
-                }
+                i = ConsultarIndice(i, +1);
             }
+            else
+            {
+                switch (efectoGenerado)
+                {
+                    case Efectos.RobaDos:
+                        i = ConsultarIndice(i, -1);
+                        Cartas.RepartirCarta(listaJugadores[i], this.mazoDeCartas);
+                        Cartas.RepartirCarta(listaJugadores[i], this.mazoDeCartas);
+                        break;
+
+                    case Efectos.RobaCuatro:
+                        i = ConsultarIndice(i, -1);
+                        for (int j = 0; j < 3; j++)
+                        {
+                            Cartas.RepartirCarta(listaJugadores[i], this.mazoDeCartas);
+                        }
+                        Cartas.cambioColor(this.cartaMesa, out colorElegido);
+                        this.lblCartaMesa.Visible = true;
+                        this.lblCartaMesa.Text = "Color Elegido: " + colorElegido;
+                        break;
+
+                    case Efectos.CambioColor:
+                        Cartas.cambioColor(this.cartaMesa, out colorElegido);
+                        this.lblCartaMesa.Visible = true;
+                        this.lblCartaMesa.Text = "Color Elegido: " + colorElegido;
+                        break;
+
+                    case Efectos.CambioSentido:
+                        rondaSentidoReloj = true;
+                        i = ConsultarIndice(i, +1); // Se le resta dos. Uno para compensar el que se suma despues y
+                        i = ConsultarIndice(i, +1); // otro para que empiece el jugador anterior al que jugó la carta
+                        break;
+
+                    case Efectos.Bloqueo:
+                        i = ConsultarIndice(i, -1);
+                        break;
+
+                    default:
+                        break;
+                }
+
+                i = ConsultarIndice(i, -1);
+            }
+            
+            return i;
         }
 
         private int ConsultarIndice(int indice,int modificador)
@@ -270,7 +290,7 @@ namespace Forms
 
         private void pbCartaMesa_BackgroundImageChanged(object sender, EventArgs e)
         {
-            lblCartaMesa.Text = "";
+            lblCartaMesa.Visible = false;
         }
     }
 }
