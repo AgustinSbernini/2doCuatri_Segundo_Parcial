@@ -29,7 +29,7 @@ namespace Forms
         /// </summary>
         private void InitializeComponent()
         {
-            this.ManoCartas = new System.Windows.Forms.ListBox();
+            this.lstManoCartas = new System.Windows.Forms.ListBox();
             this.lblCartaMesa = new System.Windows.Forms.Label();
             this.lblJugador2TotalCartas = new System.Windows.Forms.Label();
             this.lblJugador3TotalCartas = new System.Windows.Forms.Label();
@@ -37,29 +37,40 @@ namespace Forms
             this.pbCartaMesa = new System.Windows.Forms.PictureBox();
             this.lblJugador1TotalCartas = new System.Windows.Forms.Label();
             this.lblContador = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnAgarrarCarta = new System.Windows.Forms.Button();
             this.lblJugador3 = new System.Windows.Forms.Label();
             this.lblJugador2 = new System.Windows.Forms.Label();
             this.lblJugador4 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnTirarCarta = new System.Windows.Forms.Button();
+            this.pbCartaMano = new System.Windows.Forms.PictureBox();
+            this.btnHistorial = new System.Windows.Forms.Button();
+            this.pbJugador4 = new System.Windows.Forms.PictureBox();
+            this.pbJugador2 = new System.Windows.Forms.PictureBox();
+            this.pbJugador1 = new System.Windows.Forms.PictureBox();
+            this.pbJugador3 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbCartaMesa)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCartaMano)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbJugador4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbJugador2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbJugador1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbJugador3)).BeginInit();
             this.SuspendLayout();
             // 
-            // ManoCartas
+            // lstManoCartas
             // 
-            this.ManoCartas.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.ManoCartas.FormattingEnabled = true;
-            this.ManoCartas.ItemHeight = 24;
-            this.ManoCartas.Location = new System.Drawing.Point(504, 521);
-            this.ManoCartas.Name = "ManoCartas";
-            this.ManoCartas.Size = new System.Drawing.Size(254, 172);
-            this.ManoCartas.TabIndex = 0;
-            this.ManoCartas.Click += new System.EventHandler(this.ManoCartas_Click);
+            this.lstManoCartas.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.lstManoCartas.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lstManoCartas.FormattingEnabled = true;
+            this.lstManoCartas.ItemHeight = 24;
+            this.lstManoCartas.Location = new System.Drawing.Point(469, 521);
+            this.lstManoCartas.Name = "lstManoCartas";
+            this.lstManoCartas.Size = new System.Drawing.Size(289, 172);
+            this.lstManoCartas.TabIndex = 0;
+            this.lstManoCartas.SelectedIndexChanged += new System.EventHandler(this.lstManoCartas_SelectedIndexChanged);
             // 
             // lblCartaMesa
             // 
+            this.lblCartaMesa.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblCartaMesa.BackColor = System.Drawing.Color.Transparent;
             this.lblCartaMesa.Font = new System.Drawing.Font("Comic Sans MS", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblCartaMesa.ForeColor = System.Drawing.Color.Black;
@@ -71,6 +82,7 @@ namespace Forms
             // 
             // lblJugador2TotalCartas
             // 
+            this.lblJugador2TotalCartas.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblJugador2TotalCartas.BackColor = System.Drawing.Color.Black;
             this.lblJugador2TotalCartas.Font = new System.Drawing.Font("Comic Sans MS", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblJugador2TotalCartas.ForeColor = System.Drawing.Color.Yellow;
@@ -84,6 +96,7 @@ namespace Forms
             // 
             // lblJugador3TotalCartas
             // 
+            this.lblJugador3TotalCartas.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblJugador3TotalCartas.BackColor = System.Drawing.Color.Black;
             this.lblJugador3TotalCartas.Font = new System.Drawing.Font("Comic Sans MS", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblJugador3TotalCartas.ForeColor = System.Drawing.Color.Yellow;
@@ -97,11 +110,12 @@ namespace Forms
             // 
             // lblJugador4TotalCartas
             // 
+            this.lblJugador4TotalCartas.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblJugador4TotalCartas.BackColor = System.Drawing.Color.Black;
             this.lblJugador4TotalCartas.Font = new System.Drawing.Font("Comic Sans MS", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblJugador4TotalCartas.ForeColor = System.Drawing.Color.Yellow;
             this.lblJugador4TotalCartas.Image = global::Forms.Properties.Resources.DorsoJugadores;
-            this.lblJugador4TotalCartas.Location = new System.Drawing.Point(1031, 202);
+            this.lblJugador4TotalCartas.Location = new System.Drawing.Point(1026, 202);
             this.lblJugador4TotalCartas.Name = "lblJugador4TotalCartas";
             this.lblJugador4TotalCartas.Size = new System.Drawing.Size(124, 181);
             this.lblJugador4TotalCartas.TabIndex = 4;
@@ -110,6 +124,7 @@ namespace Forms
             // 
             // pbCartaMesa
             // 
+            this.pbCartaMesa.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pbCartaMesa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pbCartaMesa.Location = new System.Drawing.Point(634, 269);
             this.pbCartaMesa.Name = "pbCartaMesa";
@@ -123,34 +138,38 @@ namespace Forms
             this.lblJugador1TotalCartas.AutoSize = true;
             this.lblJugador1TotalCartas.BackColor = System.Drawing.Color.Black;
             this.lblJugador1TotalCartas.ForeColor = System.Drawing.Color.White;
-            this.lblJugador1TotalCartas.Location = new System.Drawing.Point(1064, 611);
+            this.lblJugador1TotalCartas.Location = new System.Drawing.Point(775, 676);
             this.lblJugador1TotalCartas.Name = "lblJugador1TotalCartas";
-            this.lblJugador1TotalCartas.Size = new System.Drawing.Size(74, 20);
+            this.lblJugador1TotalCartas.Size = new System.Drawing.Size(0, 20);
             this.lblJugador1TotalCartas.TabIndex = 6;
-            this.lblJugador1TotalCartas.Text = "Jugador 1";
+            this.lblJugador1TotalCartas.Visible = false;
             // 
             // lblContador
             // 
             this.lblContador.AutoSize = true;
             this.lblContador.BackColor = System.Drawing.Color.Black;
+            this.lblContador.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblContador.ForeColor = System.Drawing.Color.White;
-            this.lblContador.Location = new System.Drawing.Point(64, 37);
+            this.lblContador.Location = new System.Drawing.Point(90, 64);
             this.lblContador.Name = "lblContador";
-            this.lblContador.Size = new System.Drawing.Size(50, 20);
+            this.lblContador.Size = new System.Drawing.Size(75, 31);
             this.lblContador.TabIndex = 7;
             this.lblContador.Text = "label1";
             // 
-            // button1
+            // btnAgarrarCarta
             // 
-            this.button1.Image = global::Forms.Properties.Resources.Dorso;
-            this.button1.Location = new System.Drawing.Point(469, 269);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(124, 186);
-            this.button1.TabIndex = 8;
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnAgarrarCarta.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnAgarrarCarta.Image = global::Forms.Properties.Resources.Dorso;
+            this.btnAgarrarCarta.Location = new System.Drawing.Point(469, 269);
+            this.btnAgarrarCarta.Name = "btnAgarrarCarta";
+            this.btnAgarrarCarta.Size = new System.Drawing.Size(124, 186);
+            this.btnAgarrarCarta.TabIndex = 8;
+            this.btnAgarrarCarta.UseVisualStyleBackColor = true;
+            this.btnAgarrarCarta.Click += new System.EventHandler(this.btnAgarrarCarta_Click);
             // 
             // lblJugador3
             // 
+            this.lblJugador3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblJugador3.AutoSize = true;
             this.lblJugador3.BackColor = System.Drawing.Color.Black;
             this.lblJugador3.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -163,6 +182,7 @@ namespace Forms
             // 
             // lblJugador2
             // 
+            this.lblJugador2.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblJugador2.AutoSize = true;
             this.lblJugador2.BackColor = System.Drawing.Color.Black;
             this.lblJugador2.Font = new System.Drawing.Font("Comic Sans MS", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -175,6 +195,7 @@ namespace Forms
             // 
             // lblJugador4
             // 
+            this.lblJugador4.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblJugador4.AutoSize = true;
             this.lblJugador4.BackColor = System.Drawing.Color.Black;
             this.lblJugador4.Font = new System.Drawing.Font("Comic Sans MS", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -185,28 +206,94 @@ namespace Forms
             this.lblJugador4.TabIndex = 13;
             this.lblJugador4.Text = "Jugador 4";
             // 
-            // button2
+            // btnTirarCarta
             // 
-            this.button2.BackColor = System.Drawing.Color.LimeGreen;
-            this.button2.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button2.Location = new System.Drawing.Point(811, 572);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(99, 75);
-            this.button2.TabIndex = 14;
-            this.button2.Text = "Tirar Carta";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnTirarCarta.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnTirarCarta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnTirarCarta.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnTirarCarta.Location = new System.Drawing.Point(809, 572);
+            this.btnTirarCarta.Name = "btnTirarCarta";
+            this.btnTirarCarta.Size = new System.Drawing.Size(113, 84);
+            this.btnTirarCarta.TabIndex = 14;
+            this.btnTirarCarta.Text = "Tirar Carta";
+            this.btnTirarCarta.UseVisualStyleBackColor = false;
+            this.btnTirarCarta.Click += new System.EventHandler(this.btnTirarCarta_Click);
             // 
-            // pictureBox1
+            // pbCartaMano
             // 
-            this.pictureBox1.BackgroundImage = global::Forms.Properties.Resources._0AzulNinguno;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Image = global::Forms.Properties.Resources.Tachado1;
-            this.pictureBox1.Location = new System.Drawing.Point(324, 507);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(124, 186);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 15;
-            this.pictureBox1.TabStop = false;
+            this.pbCartaMano.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.pbCartaMano.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pbCartaMano.Location = new System.Drawing.Point(324, 507);
+            this.pbCartaMano.Name = "pbCartaMano";
+            this.pbCartaMano.Size = new System.Drawing.Size(124, 186);
+            this.pbCartaMano.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbCartaMano.TabIndex = 15;
+            this.pbCartaMano.TabStop = false;
+            // 
+            // btnHistorial
+            // 
+            this.btnHistorial.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnHistorial.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnHistorial.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnHistorial.Location = new System.Drawing.Point(90, 572);
+            this.btnHistorial.Name = "btnHistorial";
+            this.btnHistorial.Size = new System.Drawing.Size(131, 84);
+            this.btnHistorial.TabIndex = 16;
+            this.btnHistorial.Text = "Historial de la Partida";
+            this.btnHistorial.UseVisualStyleBackColor = false;
+            this.btnHistorial.Click += new System.EventHandler(this.btnHistorial_Click);
+            // 
+            // pbJugador4
+            // 
+            this.pbJugador4.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.pbJugador4.BackColor = System.Drawing.Color.Transparent;
+            this.pbJugador4.Image = global::Forms.Properties.Resources.GloboTextoInvertido;
+            this.pbJugador4.Location = new System.Drawing.Point(868, 142);
+            this.pbJugador4.Name = "pbJugador4";
+            this.pbJugador4.Size = new System.Drawing.Size(152, 124);
+            this.pbJugador4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbJugador4.TabIndex = 17;
+            this.pbJugador4.TabStop = false;
+            this.pbJugador4.Visible = false;
+            // 
+            // pbJugador2
+            // 
+            this.pbJugador2.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.pbJugador2.BackColor = System.Drawing.Color.Transparent;
+            this.pbJugador2.Image = global::Forms.Properties.Resources.GloboTexto;
+            this.pbJugador2.Location = new System.Drawing.Point(183, 142);
+            this.pbJugador2.Name = "pbJugador2";
+            this.pbJugador2.Size = new System.Drawing.Size(152, 124);
+            this.pbJugador2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbJugador2.TabIndex = 18;
+            this.pbJugador2.TabStop = false;
+            this.pbJugador2.Visible = false;
+            // 
+            // pbJugador1
+            // 
+            this.pbJugador1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.pbJugador1.BackColor = System.Drawing.Color.Transparent;
+            this.pbJugador1.Image = global::Forms.Properties.Resources.GloboTexto;
+            this.pbJugador1.Location = new System.Drawing.Point(775, 424);
+            this.pbJugador1.Name = "pbJugador1";
+            this.pbJugador1.Size = new System.Drawing.Size(152, 124);
+            this.pbJugador1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbJugador1.TabIndex = 19;
+            this.pbJugador1.TabStop = false;
+            this.pbJugador1.Visible = false;
+            // 
+            // pbJugador3
+            // 
+            this.pbJugador3.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.pbJugador3.BackColor = System.Drawing.Color.Transparent;
+            this.pbJugador3.Image = global::Forms.Properties.Resources.GloboTexto;
+            this.pbJugador3.Location = new System.Drawing.Point(664, 12);
+            this.pbJugador3.Name = "pbJugador3";
+            this.pbJugador3.Size = new System.Drawing.Size(152, 124);
+            this.pbJugador3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbJugador3.TabIndex = 20;
+            this.pbJugador3.TabStop = false;
+            this.pbJugador3.Visible = false;
             // 
             // FrmJuegoEnPartida
             // 
@@ -215,12 +302,17 @@ namespace Forms
             this.BackgroundImage = global::Forms.Properties.Resources.Mesa;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1191, 705);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.pbJugador3);
+            this.Controls.Add(this.pbJugador1);
+            this.Controls.Add(this.pbJugador2);
+            this.Controls.Add(this.pbJugador4);
+            this.Controls.Add(this.btnHistorial);
+            this.Controls.Add(this.pbCartaMano);
+            this.Controls.Add(this.btnTirarCarta);
             this.Controls.Add(this.lblJugador4);
             this.Controls.Add(this.lblJugador2);
             this.Controls.Add(this.lblJugador3);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnAgarrarCarta);
             this.Controls.Add(this.lblContador);
             this.Controls.Add(this.lblJugador1TotalCartas);
             this.Controls.Add(this.pbCartaMesa);
@@ -228,15 +320,20 @@ namespace Forms
             this.Controls.Add(this.lblJugador3TotalCartas);
             this.Controls.Add(this.lblJugador2TotalCartas);
             this.Controls.Add(this.lblCartaMesa);
-            this.Controls.Add(this.ManoCartas);
+            this.Controls.Add(this.lstManoCartas);
             this.DoubleBuffered = true;
             this.MinimumSize = new System.Drawing.Size(1209, 752);
             this.Name = "FrmJuegoEnPartida";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmJuegoEnPartida";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmJuegoEnPartida_FormClosing);
             this.Load += new System.EventHandler(this.FrmJuegoEnPartida_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbCartaMesa)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCartaMano)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbJugador4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbJugador2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbJugador1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbJugador3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -244,7 +341,7 @@ namespace Forms
 
         #endregion
 
-        private System.Windows.Forms.ListBox ManoCartas;
+        private System.Windows.Forms.ListBox lstManoCartas;
         private System.Windows.Forms.Label lblCartaMesa;
         private System.Windows.Forms.Label lblJugador2TotalCartas;
         private System.Windows.Forms.Label lblJugador3TotalCartas;
@@ -252,11 +349,16 @@ namespace Forms
         private System.Windows.Forms.PictureBox pbCartaMesa;
         private System.Windows.Forms.Label lblJugador1TotalCartas;
         private System.Windows.Forms.Label lblContador;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnAgarrarCarta;
         private System.Windows.Forms.Label lblJugador3;
         private System.Windows.Forms.Label lblJugador2;
         private System.Windows.Forms.Label lblJugador4;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnTirarCarta;
+        private System.Windows.Forms.PictureBox pbCartaMano;
+        private System.Windows.Forms.Button btnHistorial;
+        private System.Windows.Forms.PictureBox pbJugador4;
+        private System.Windows.Forms.PictureBox pbJugador2;
+        private System.Windows.Forms.PictureBox pbJugador1;
+        private System.Windows.Forms.PictureBox pbJugador3;
     }
 }

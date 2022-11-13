@@ -107,14 +107,14 @@ namespace Biblioteca_de_clases
 
             if(!this.especial)
             {
-                retorno.Append($"Numero: {this.numero} Color: {this.color}");
+                retorno.Append($"{this.numero} - {this.color}");
             }
             else
             {
-                retorno.Append($"Efecto: {this.efecto}");
+                retorno.Append($"{this.efecto}");
                 if (!(this.color == Colores.Negro))
                 {
-                    retorno.Append($" Color: {this.color}");
+                    retorno.Append($" - {this.color}");
                 }
             }
 
@@ -155,6 +155,77 @@ namespace Biblioteca_de_clases
                     mazo.Add(carta);
                 }    
             }
+            else
+            {
+                StreamWriter streamWriter = new StreamWriter("Cartas.json", true);
+                string jsonString;
+                Cartas cartaAux;
+
+                foreach (Colores color in Enum.GetValues(typeof(Colores)))
+                {
+                    if (color != Colores.Negro)
+                    {
+                        for (int i = 0; i < 10; i++)
+                        {
+                            if (i == 0)
+                            {
+                                cartaAux = new(i, color);
+                                jsonString = JsonSerializer.Serialize(cartaAux);
+
+                                streamWriter.WriteLine(jsonString);
+                            }
+                            else
+                            {
+                                for (int j = 0; j < 2; j++)
+                                {
+                                    cartaAux = new(i, color);
+                                    jsonString = JsonSerializer.Serialize(cartaAux);
+
+                                    streamWriter.WriteLine(jsonString);
+                                }
+                            }
+                        }
+
+                        for (int j = 0; j < 2; j++)
+                        {
+                            cartaAux = new(Efectos.RobaDos, color);
+                            jsonString = JsonSerializer.Serialize(cartaAux);
+
+                            streamWriter.WriteLine(jsonString);
+
+                            cartaAux = new(Efectos.Bloqueo, color);
+                            jsonString = JsonSerializer.Serialize(cartaAux);
+
+                            streamWriter.WriteLine(jsonString);
+
+                            cartaAux = new(Efectos.CambioSentido, color);
+                            jsonString = JsonSerializer.Serialize(cartaAux);
+
+                            streamWriter.WriteLine(jsonString);
+                        }
+                    }
+                    else
+                    {
+                        for (int i = 0; i < 4; i++)
+                        {
+                            cartaAux = new(Efectos.RobaCuatro);
+                            jsonString = JsonSerializer.Serialize(cartaAux);
+
+                            streamWriter.WriteLine(jsonString);
+
+                            cartaAux = new(Efectos.CambioColor);
+                            jsonString = JsonSerializer.Serialize(cartaAux);
+
+                            streamWriter.WriteLine(jsonString);
+                        }
+                    }
+                }
+
+                streamWriter.Close();
+                streamWriter.Dispose();
+
+                mazo = MazoDeCartas();
+            }
 
             return mazo;
         }
@@ -187,5 +258,23 @@ namespace Biblioteca_de_clases
             return cartaAux;
         }
 
+        public static bool RellenarMazo(List<Cartas> mazo, List<Cartas> cartasJugadas)
+        {
+            bool retorno = false;
+
+            if(mazo is not null && cartasJugadas is not null)
+            {
+                foreach(Cartas carta in cartasJugadas)
+                {
+                    mazo.Add(carta);
+                }
+
+                cartasJugadas.Clear();
+
+                retorno = true;
+            }
+
+            return retorno;
+        }
     }    
 }

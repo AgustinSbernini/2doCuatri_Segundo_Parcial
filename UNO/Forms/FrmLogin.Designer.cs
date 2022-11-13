@@ -42,8 +42,10 @@ namespace Forms
             // lblUsuario
             // 
             this.lblUsuario.AutoSize = true;
+            this.lblUsuario.BackColor = System.Drawing.Color.Black;
             this.lblUsuario.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblUsuario.Location = new System.Drawing.Point(77, 37);
+            this.lblUsuario.ForeColor = System.Drawing.Color.White;
+            this.lblUsuario.Location = new System.Drawing.Point(12, 35);
             this.lblUsuario.Name = "lblUsuario";
             this.lblUsuario.Size = new System.Drawing.Size(84, 28);
             this.lblUsuario.TabIndex = 0;
@@ -52,8 +54,10 @@ namespace Forms
             // lblContraseña
             // 
             this.lblContraseña.AutoSize = true;
+            this.lblContraseña.BackColor = System.Drawing.Color.Black;
             this.lblContraseña.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblContraseña.Location = new System.Drawing.Point(77, 139);
+            this.lblContraseña.ForeColor = System.Drawing.Color.White;
+            this.lblContraseña.Location = new System.Drawing.Point(12, 139);
             this.lblContraseña.Name = "lblContraseña";
             this.lblContraseña.Size = new System.Drawing.Size(114, 28);
             this.lblContraseña.TabIndex = 1;
@@ -61,16 +65,20 @@ namespace Forms
             // 
             // txtUsuario
             // 
+            this.txtUsuario.BackColor = System.Drawing.Color.Black;
             this.txtUsuario.Font = new System.Drawing.Font("Comic Sans MS", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtUsuario.Location = new System.Drawing.Point(77, 82);
+            this.txtUsuario.ForeColor = System.Drawing.Color.White;
+            this.txtUsuario.Location = new System.Drawing.Point(12, 82);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(200, 33);
             this.txtUsuario.TabIndex = 2;
             // 
             // txtContraseña
             // 
+            this.txtContraseña.BackColor = System.Drawing.Color.Black;
             this.txtContraseña.Font = new System.Drawing.Font("Comic Sans MS", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtContraseña.Location = new System.Drawing.Point(77, 185);
+            this.txtContraseña.ForeColor = System.Drawing.Color.White;
+            this.txtContraseña.Location = new System.Drawing.Point(12, 188);
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.Size = new System.Drawing.Size(200, 33);
             this.txtContraseña.TabIndex = 3;
@@ -78,20 +86,24 @@ namespace Forms
             // 
             // btnLogin
             // 
+            this.btnLogin.BackColor = System.Drawing.Color.Black;
             this.btnLogin.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnLogin.Location = new System.Drawing.Point(363, 82);
+            this.btnLogin.ForeColor = System.Drawing.Color.White;
+            this.btnLogin.Location = new System.Drawing.Point(383, 82);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(133, 85);
             this.btnLogin.TabIndex = 4;
             this.btnLogin.Text = "Login";
-            this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // lblRepetirContraseña
             // 
             this.lblRepetirContraseña.AutoSize = true;
+            this.lblRepetirContraseña.BackColor = System.Drawing.Color.Black;
             this.lblRepetirContraseña.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblRepetirContraseña.Location = new System.Drawing.Point(77, 236);
+            this.lblRepetirContraseña.ForeColor = System.Drawing.Color.White;
+            this.lblRepetirContraseña.Location = new System.Drawing.Point(12, 236);
             this.lblRepetirContraseña.Name = "lblRepetirContraseña";
             this.lblRepetirContraseña.Size = new System.Drawing.Size(200, 28);
             this.lblRepetirContraseña.TabIndex = 5;
@@ -99,8 +111,10 @@ namespace Forms
             // 
             // txtRepetirContraseña
             // 
+            this.txtRepetirContraseña.BackColor = System.Drawing.Color.Black;
             this.txtRepetirContraseña.Font = new System.Drawing.Font("Comic Sans MS", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtRepetirContraseña.Location = new System.Drawing.Point(77, 280);
+            this.txtRepetirContraseña.ForeColor = System.Drawing.Color.White;
+            this.txtRepetirContraseña.Location = new System.Drawing.Point(12, 282);
             this.txtRepetirContraseña.Name = "txtRepetirContraseña";
             this.txtRepetirContraseña.Size = new System.Drawing.Size(200, 33);
             this.txtRepetirContraseña.TabIndex = 6;
@@ -108,20 +122,24 @@ namespace Forms
             // 
             // btnRegistrar
             // 
+            this.btnRegistrar.BackColor = System.Drawing.Color.Black;
             this.btnRegistrar.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnRegistrar.Location = new System.Drawing.Point(363, 208);
+            this.btnRegistrar.ForeColor = System.Drawing.Color.White;
+            this.btnRegistrar.Location = new System.Drawing.Point(383, 208);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(133, 85);
             this.btnRegistrar.TabIndex = 7;
             this.btnRegistrar.Text = "Registrarse";
-            this.btnRegistrar.UseVisualStyleBackColor = true;
+            this.btnRegistrar.UseVisualStyleBackColor = false;
             this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
             // FrmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(528, 352);
+            this.BackgroundImage = global::Forms.Properties.Resources.Login2;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.ClientSize = new System.Drawing.Size(537, 395);
             this.Controls.Add(this.btnRegistrar);
             this.Controls.Add(this.txtRepetirContraseña);
             this.Controls.Add(this.lblRepetirContraseña);
@@ -132,9 +150,9 @@ namespace Forms
             this.Controls.Add(this.lblUsuario);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(546, 399);
+            this.MaximumSize = new System.Drawing.Size(555, 442);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(546, 399);
+            this.MinimumSize = new System.Drawing.Size(555, 442);
             this.Name = "FrmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";

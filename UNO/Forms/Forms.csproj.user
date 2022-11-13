@@ -4,6 +4,9 @@
     <Compile Update="FrmCambioColor.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="FrmHistorialPartida.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="FrmJuegoEnPartida.cs">
       <SubType>Form</SubType>
     </Compile>

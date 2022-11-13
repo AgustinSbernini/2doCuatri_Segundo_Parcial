@@ -25,7 +25,7 @@ namespace Biblioteca_de_clases
         }
         public bool ProbarConexion()
         {
-            bool rta = true;
+            bool retorno = true;
 
             try
             {
@@ -33,7 +33,7 @@ namespace Biblioteca_de_clases
             }
             catch (Exception)
             {
-                rta = false;
+                retorno = false;
             }
             finally
             {
@@ -43,7 +43,7 @@ namespace Biblioteca_de_clases
                 }
             }
 
-            return rta;
+            return retorno;
         }
 
         public Usuarios LogearUsuario(string usuario, string contraseña)
@@ -64,19 +64,14 @@ namespace Biblioteca_de_clases
 
                 if(this.reader.Read())
                 {
-                    usuarioLogeado = new(reader.GetString(1), reader.GetString(2));
-
-                    usuarioLogeado.PartidasGanadas = reader.GetInt32(3);
-                    usuarioLogeado.PartidasJugadas = reader.GetInt32(4);
-                    usuarioLogeado.UltimoLogeo = reader.GetDateTime(5);
-                    usuarioLogeado.Winrate = reader.GetInt32(6);
+                    usuarioLogeado = new(reader.GetString(1), reader.GetString(2), reader.GetInt32(3), reader.GetInt32(4), reader.GetInt32(5), reader.GetDateTime(6));
                 }
 
                 reader.Close();
             }
             catch(Exception)
             {
-
+                usuarioLogeado = null;
             }
             finally
             {
@@ -120,7 +115,7 @@ namespace Biblioteca_de_clases
                 }
                 catch (Exception)
                 {
-
+                    retorno = -1;
                 }
                 finally
                 {
@@ -145,17 +140,16 @@ namespace Biblioteca_de_clases
                     this.command = new SqlCommand();
                     string ultimoLogeo = $"{usuario.UltimoLogeo.Year}-{usuario.UltimoLogeo.Month}-{usuario.UltimoLogeo.Day}";
                     this.command.CommandType = CommandType.Text;
-                    this.command.CommandText = $"UPDATE dbo.UsuariosDB SET PartidasGanadas = {usuario.PartidasGanadas}, PartidasJugadas = {usuario.PartidasGanadas}, Winrate = {usuario.Winrate}, UltimoLogeo = '{ultimoLogeo}' WHERE Usuario = '{usuario.Usuario}'";
+                    this.command.CommandText = $"UPDATE dbo.UsuariosDB SET PartidasGanadas = {usuario.PartidasGanadas}, PartidasJugadas = {usuario.PartidasJugadas}, Winrate = {usuario.Winrate}, UltimoLogeo = '{ultimoLogeo}' WHERE Usuario = '{usuario.Usuario}'";
                     this.command.Connection = this.connection;
 
                     this.connection.Open();
 
-                    retorno = this.command.ExecuteNonQuery();
-                   
+                    retorno = this.command.ExecuteNonQuery();                
                 }
                 catch (Exception)
                 {
-
+                    retorno = -1;
                 }
                 finally
                 {

@@ -13,10 +13,11 @@ namespace Forms
 {
     public partial class FrmLogin : Form
     {
-        UsuariosDB usuarioDB;
+        UsuariosDB dataBases;
         Usuarios usuario;
         bool flagLogin;
-        FrmJuegoEnPartida frmJuegoEnpartida;
+        FrmMenuPrincipal frmMenuPrincipal;
+        int validar;
         public FrmLogin()
         {
             InitializeComponent();
@@ -24,43 +25,56 @@ namespace Forms
 
         private void FrmLogin_Load(object sender, EventArgs e)
         {
-            usuarioDB = new();
+            this.dataBases = new();
             this.txtUsuario.Text = "Agustin";
             this.txtContraseña.Text = "agus123";
             this.txtRepetirContraseña.Visible = false;
             this.lblRepetirContraseña.Visible = false;
-            flagLogin = true;
+            this.flagLogin = true;
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            if(flagLogin)
+            if(this.dataBases.ProbarConexion())
             {
-                usuario = this.usuarioDB.LogearUsuario(this.txtUsuario.Text, this.txtContraseña.Text);
-                frmJuegoEnpartida = new(usuario, 4);
-                frmJuegoEnpartida.Show();
-            }
-            else
-            {
-                int validar = this.usuarioDB.CrearUsuario(this.txtUsuario.Text, this.txtContraseña.Text, txtRepetirContraseña.Text);
-                if (validar != -1)
+                if(this.flagLogin)
                 {
-                    MessageBox.Show(validar.ToString());
+                    if(this.txtUsuario.Text != "Jugador 1" && this.txtUsuario.Text != "Jugador 2" && this.txtUsuario.Text != "Jugador 3" && this.txtUsuario.Text != "Jugador 4")
+                    {
+                        this.usuario = this.dataBases.LogearUsuario(this.txtUsuario.Text, this.txtContraseña.Text);
+                    }
+                    if (usuario != null)
+                    {
+                        this.frmMenuPrincipal = new(usuario);
+                        this.Hide();
+                        if(this.frmMenuPrincipal.ShowDialog() == DialogResult.OK)
+                        {
+                            this.Close();
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Usuario o contraseña invalido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }   
                 }
                 else
                 {
-                    MessageBox.Show("Usuario o contraseña invalido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                   this.validar = this.dataBases.CrearUsuario(this.txtUsuario.Text, this.txtContraseña.Text, txtRepetirContraseña.Text);
+                    
+                    if (this.validar != -1)
+                    {
+                        MessageBox.Show("El usuario se ha registrado con exito!", "Registro Completo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
+                    else
+                    {
+                        MessageBox.Show("El usuario ya esta registrado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
-            }
-            /*
-            if(usuario != null)
-            {
-                MessageBox.Show(this.usuario.ToString());
             }
             else
             {
-                MessageBox.Show("Usuario o contraseña invalido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }*/
+                MessageBox.Show("Error al intentar conectarse a la base de datos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnRegistrar_Click(object sender, EventArgs e)
@@ -72,7 +86,7 @@ namespace Forms
                 this.btnLogin.Text = "Completar Registro";
                 this.btnRegistrar.Text = "Cancelar";
                 this.Text = "Registrar Usuario";
-                flagLogin = false;
+                this.flagLogin = false;
             }
             else
             {
@@ -81,27 +95,8 @@ namespace Forms
                 this.btnLogin.Text = "Login";
                 this.btnRegistrar.Text = "Registrarse";
                 this.Text = "Login";
-                flagLogin = true;
+                this.flagLogin = true;
             }
         }
-        /*
-        private void button1_click(object sender, eventargs e)
-        {
-            usuarios useraux = new usuarios("asd", "asd");
-            useraux.partidasjugadas = 12;
-            useraux.partidasganadas = 2;
-            int num = (int) ((2 / 12.0) * 100);
-            useraux.winrate = num;
-            int validar = usuariodb.actualizarusuario(useraux);
-
-            if (validar != -1)
-            {
-                messagebox.show(useraux.tostring());
-            }
-            else
-            {
-                messagebox.show("usuario o contraseña invalido", "error", messageboxbuttons.ok, messageboxicon.error);
-            }
-        }*/
     }
 }

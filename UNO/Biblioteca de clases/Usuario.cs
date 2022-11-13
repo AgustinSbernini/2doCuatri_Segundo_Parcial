@@ -26,12 +26,33 @@ namespace Biblioteca_de_clases
             this.ultimoLogeo = DateTime.Now;
             this.cartasEnMano = new();
         }
-
+        public Usuarios(string usuario, string contraseña, int partidasGanadas, int partidasJugadas, int winrate, DateTime ultimoLogeo) : this(usuario, contraseña)
+        {
+            this.ultimoLogeo = ultimoLogeo;
+            this.partidasGanadas = partidasGanadas;
+            this.partidasJugadas = partidasJugadas;
+            this.winrate = winrate;
+        }
         public string Usuario { get => usuario; }
         public string Contraseña { get => contraseña; }
+        public int PartidasJugadas { get => partidasJugadas; set => partidasJugadas = value;}
         public int PartidasGanadas { get => partidasGanadas; set => partidasGanadas = value; }
-        public int PartidasJugadas { get => partidasJugadas; set => partidasJugadas = value; }
-        public int Winrate { get => winrate; set => winrate = value; }
+        public int Winrate { 
+            get
+            {
+                if(partidasGanadas != 0 && partidasJugadas != 0)
+                {
+                    winrate = (partidasGanadas * 100) / partidasJugadas;
+                }
+                else
+                {
+                    winrate = 0;
+                }
+                return winrate;
+            }
+
+            set => winrate = value; 
+        }
         public DateTime UltimoLogeo { get => ultimoLogeo; set => ultimoLogeo = value; }
         public List<Cartas> CartasEnMano { get => cartasEnMano; set => cartasEnMano = value; }
 
