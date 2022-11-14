@@ -13,7 +13,7 @@ namespace Forms
 {
     public partial class FrmLogin : Form
     {
-        UsuariosDB dataBases;
+        UsuariosDB usuarioDB;
         Usuarios usuario;
         bool flagLogin;
         FrmMenuPrincipal frmMenuPrincipal;
@@ -25,7 +25,7 @@ namespace Forms
 
         private void FrmLogin_Load(object sender, EventArgs e)
         {
-            this.dataBases = new();
+            this.usuarioDB = new();
             this.txtUsuario.Text = "Agustin";
             this.txtContraseña.Text = "agus123";
             this.txtRepetirContraseña.Visible = false;
@@ -35,13 +35,13 @@ namespace Forms
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            if(this.dataBases.ProbarConexion())
+            if(this.usuarioDB.ProbarConexion())
             {
                 if(this.flagLogin)
                 {
                     if(this.txtUsuario.Text != "Jugador 1" && this.txtUsuario.Text != "Jugador 2" && this.txtUsuario.Text != "Jugador 3" && this.txtUsuario.Text != "Jugador 4")
                     {
-                        this.usuario = this.dataBases.LogearUsuario(this.txtUsuario.Text, this.txtContraseña.Text);
+                        this.usuario = this.usuarioDB.RecuperarUno(this.txtUsuario.Text, this.txtContraseña.Text);
                     }
                     if (usuario != null)
                     {
@@ -59,8 +59,15 @@ namespace Forms
                 }
                 else
                 {
-                   this.validar = this.dataBases.CrearUsuario(this.txtUsuario.Text, this.txtContraseña.Text, txtRepetirContraseña.Text);
-                    
+                    if(this.txtContraseña.Text == txtRepetirContraseña.Text)
+                    {
+                        this.validar = this.usuarioDB.CrearNuevo(this.txtUsuario.Text, this.txtContraseña.Text);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Las contraseñas no coinciden", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+
                     if (this.validar != -1)
                     {
                         MessageBox.Show("El usuario se ha registrado con exito!", "Registro Completo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);

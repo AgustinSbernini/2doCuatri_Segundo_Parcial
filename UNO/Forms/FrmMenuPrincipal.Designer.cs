@@ -92,6 +92,7 @@ namespace Forms
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmMenuPrincipal";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmMenuPrincipal_FormClosing);
+            this.Load += new System.EventHandler(this.FrmMenuPrincipal_Load);
             this.ResumeLayout(false);
 
         }

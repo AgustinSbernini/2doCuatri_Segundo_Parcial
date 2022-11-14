@@ -22,7 +22,7 @@ namespace Forms
         private Cartas cartaMesa;
         private Cartas cartaMano;
         private Usuarios user;
-        private UsuariosDB dataBase;
+        private UsuariosDB usuarioDB;
         private int numeroUser;
         private int numeroCancelarTarea;
         private bool soloBots;
@@ -40,7 +40,9 @@ namespace Forms
         public delegate void ActualizarHistorial(string historialRecibido);
         public ActualizarHistorial actualizarHistorial;
         private int cantidadCartas;
-
+        private DateTime inicioPartida;
+        private DateTime finalPartida;
+        private int cantidadCartasJugadas;
         public FrmJuegoEnPartida()
         {
             InitializeComponent();
@@ -56,13 +58,13 @@ namespace Forms
         public FrmJuegoEnPartida(Usuarios user, bool soloBots, int cantidadCartas) : this()
         {
             this.soloBots = soloBots;
-            this.dataBase = new();
+            this.usuarioDB = new();
             this.cantidadCartas = cantidadCartas;
             if (this.soloBots)
             {
                 this.numeroUser = -1;
                 this.empezoPartidaBots = false;
-                this.user = this.dataBase.LogearUsuario("Jugador 1", "Aux");
+                this.user = this.usuarioDB.RecuperarUno(new Usuarios("Jugador 1", "Aux"));
             }
             else
             {
@@ -90,11 +92,13 @@ namespace Forms
             this.lblContador.Text = this.turnoUser;
             this.cerrarJuegoSeguro = false;
             this.banderaGanador = true;
-            
+            this.cantidadCartasJugadas = 0;
+            this.inicioPartida = DateTime.Now;
+
             // Crea la cantidad de usuarios necesarios para rellenar la mesa y los guarda en una lista
             for (int i = 2; i < 5; i++)
             {
-                Usuarios usuarioAux = this.dataBase.LogearUsuario($"Jugador {i}", "Aux");
+                Usuarios usuarioAux = this.usuarioDB.RecuperarUno(new Usuarios($"Jugador {i}", "Aux"));
                 this.listaJugadores.Add(usuarioAux);
             }
 
@@ -184,7 +188,39 @@ namespace Forms
                 }
             }
         }
+        private void btnAgarrarCarta_Click(object sender, EventArgs e)
+        {
+            if (this.lblContador.Text == this.turnoUser)
+            {
+                if (!user.CartasEnMano.Contains(cartaMesa))
+                {
+                    if (this.banderaGanador)
+                    {
+                        Cartas.RepartirCarta(this.user, this.mazoDeCartas);
 
+                        this.lstManoCartas.Items.Clear();
+
+                        foreach (Cartas carta in user.CartasEnMano)
+                        {
+                            this.lstManoCartas.Items.Add(carta);
+                        }
+
+                        partidaEnJuego(rondaSentidoReloj ? 1 : 3);
+                    }
+                }
+            }
+        }
+        private void btnHistorial_Click(object sender, EventArgs e)
+        {
+            if (this.frmHistorialPartida == null)
+            {
+                this.frmHistorialPartida = new(this.historial.ToString());
+                this.frmHistorialPartida.FormClosed += (o, args) => this.frmHistorialPartida = null;
+            }
+
+            this.frmHistorialPartida.Show();
+            this.frmHistorialPartida.BringToFront();
+        }
         private void lstManoCartas_SelectedIndexChanged(object sender, EventArgs e)
         {
             this.cartaMano = this.lstManoCartas.SelectedItem as Cartas;
@@ -210,12 +246,6 @@ namespace Forms
                 this.pbCartaMano.Image = Image.FromFile($"..\\..\\..\\Resources\\Tachado.png");
             }
         }
-
-        public static void cambioColorHecho(Colores color)
-        {
-            colorElegido = color;
-        }
-
 
         private async void partidaEnJuego(int i)
         {
@@ -265,42 +295,8 @@ namespace Forms
                 }
             }         
         }
-
-        private void CambiarContador(int i, int j)
-        {
-            if (this.lblContador.InvokeRequired)
-            {
-                Action<int, int> d = new(this.CambiarContador);
-
-                this.lblContador.Invoke(d, new object[] { i, j });
-            }
-            else
-            {
-                if (i == this.numeroUser)
-                {
-                    this.lblContador.Text = this.turnoUser;
-                }
-                else
-                {
-                    this.lblContador.Text = $"Turno del jugador {i + 1}\n Jugará en {j}...";
-                }
-            }
-        }
-        private void cambiarContadorCartas(int i)
-        {
-            if (this.listaLabelsCartasEnMano[i].InvokeRequired)
-            {
-                Action<int> d = new(cambiarContadorCartas);
-
-                this.listaLabelsCartasEnMano[i].Invoke(d, new object[] { i });
-            }
-            else
-            {
-                this.listaLabelsCartasEnMano[i].Text = this.listaJugadores[i].CartasEnMano.Count().ToString();
-            }
-        }
         private int turnoBots(int i)
-        {         
+        {
             this.efectoGenerado = JugarCarta(listaJugadores[i]);
 
             cambiarContadorCartas(i);
@@ -309,20 +305,7 @@ namespace Forms
 
             return i;
         }
-        private void cambiarColorMesa(Colores colorElegido)
-        {
-            if (this.lblCartaMesa.InvokeRequired)
-            {
-                Action<Colores> d = new(cambiarColorMesa);
-
-                this.lblCartaMesa.Invoke(d, new object[] { colorElegido });
-            }
-            else
-            {
-                this.lblCartaMesa.Visible = true;
-                this.lblCartaMesa.Text = "Color Elegido: " + colorElegido;
-            }
-        }
+        
 
         private int logicaEfectos(Efectos efecto, bool sentidoRonda, int i)
         {
@@ -496,13 +479,14 @@ namespace Forms
             {
                 this.lblCartaMesa.Visible = false;
             }
-
+            this.cantidadCartasJugadas++;
             for (int i = 0; i < 4; i++)
             {
                 if (this.listaJugadores[i].CartasEnMano.Count == 0)
                 {
                     if(this.banderaGanador)
                     {
+                        this.finalPartida = DateTime.Now;
                         this.numeroUser = this.numeroCancelarTarea;
                         this.historial.AppendLine($"{this.listaJugadores[i].Usuario} ganó la partida!");
                         this.listaJugadores[i].PartidasGanadas++;
@@ -550,27 +534,55 @@ namespace Forms
                 }
             }
         }
-
-        private void btnAgarrarCarta_Click(object sender, EventArgs e)
+        private void CambiarContador(int i, int j)
         {
-            if(this.lblContador.Text == this.turnoUser)
+            if (this.lblContador.InvokeRequired)
             {
-                if (!user.CartasEnMano.Contains(cartaMesa))
+                Action<int, int> d = new(this.CambiarContador);
+
+                this.lblContador.Invoke(d, new object[] { i, j });
+            }
+            else
+            {
+                if (i == this.numeroUser)
                 {
-                    if(this.banderaGanador)
-                    {
-                        Cartas.RepartirCarta(this.user, this.mazoDeCartas);
-
-                        this.lstManoCartas.Items.Clear();
-
-                        foreach (Cartas carta in user.CartasEnMano)
-                        {
-                            this.lstManoCartas.Items.Add(carta);
-                        }
-              
-                        partidaEnJuego(rondaSentidoReloj ? 1 : 3);
-                    }
+                    this.lblContador.Text = this.turnoUser;
                 }
+                else
+                {
+                    this.lblContador.Text = $"Turno del jugador {i + 1}\n Jugará en {j}...";
+                }
+            }
+        }
+        private void cambiarContadorCartas(int i)
+        {
+            if (this.listaLabelsCartasEnMano[i].InvokeRequired)
+            {
+                Action<int> d = new(cambiarContadorCartas);
+
+                this.listaLabelsCartasEnMano[i].Invoke(d, new object[] { i });
+            }
+            else
+            {
+                this.listaLabelsCartasEnMano[i].Text = this.listaJugadores[i].CartasEnMano.Count().ToString();
+            }
+        }
+        public static void cambioColorHecho(Colores color)
+        {
+            colorElegido = color;
+        }
+        private void cambiarColorMesa(Colores colorElegido)
+        {
+            if (this.lblCartaMesa.InvokeRequired)
+            {
+                Action<Colores> d = new(cambiarColorMesa);
+
+                this.lblCartaMesa.Invoke(d, new object[] { colorElegido });
+            }
+            else
+            {
+                this.lblCartaMesa.Visible = true;
+                this.lblCartaMesa.Text = "Color Elegido: " + colorElegido;
             }
         }
 
@@ -601,18 +613,6 @@ namespace Forms
             this.historial.AppendLine(usuarioAfectado + efectoRecibido);
         }
 
-        private void btnHistorial_Click(object sender, EventArgs e)
-        {
-            if (this.frmHistorialPartida == null)
-            {
-                this.frmHistorialPartida = new(this.historial.ToString());
-                this.frmHistorialPartida.FormClosed += (o, args) => this.frmHistorialPartida = null;
-            }
-
-            this.frmHistorialPartida.Show();
-            this.frmHistorialPartida.BringToFront();
-        }
-
         private void FrmJuegoEnPartida_FormClosing(object sender, FormClosingEventArgs e)
         {
             // Mensaje de advertencia cuando se intenta cerrar el formulario. si marca Yes se cierra, si marca No se cancela
@@ -627,7 +627,7 @@ namespace Forms
                     for(int i = 0; i < 4; i++)
                     {
                         this.listaJugadores[i].PartidasJugadas++;
-                        this.dataBase.ActualizarUsuario(this.listaJugadores[i]);
+                        this.usuarioDB.Actualizar(this.listaJugadores[i]);
                     }
                     if (this.frmHistorialPartida != null)
                     {
@@ -643,7 +643,7 @@ namespace Forms
                 for (int i = 0; i < 4; i++)
                 {
                     this.listaJugadores[i].PartidasJugadas++;
-                    this.dataBase.ActualizarUsuario(this.listaJugadores[i]);
+                    this.usuarioDB.Actualizar(this.listaJugadores[i]);
                 }
             }       
         }

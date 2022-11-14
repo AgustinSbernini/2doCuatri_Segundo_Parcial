@@ -8,18 +8,9 @@ using System.Data;
 
 namespace Biblioteca_de_clases
 {
-    public class UsuariosDB
+    public class UsuariosDB : DataBases, IDataBases<Usuarios>
     {
-        private static string stringConnection;
-        private SqlConnection connection;
-        private SqlCommand command;
-        private SqlDataReader reader;
-
-        static UsuariosDB()
-        {
-            UsuariosDB.stringConnection = @"Server=.;Database=UsuariosUNO;Trusted_Connection=True;";
-        }
-        public UsuariosDB()
+        public UsuariosDB() : base()
         {
             this.connection = new SqlConnection(UsuariosDB.stringConnection);
         }
@@ -46,7 +37,7 @@ namespace Biblioteca_de_clases
             return retorno;
         }
 
-        public Usuarios LogearUsuario(string usuario, string contraseña)
+        public Usuarios RecuperarUno(Usuarios usuarioIngresado)
         {
             Usuarios usuarioLogeado = null;
 
@@ -55,7 +46,7 @@ namespace Biblioteca_de_clases
                 this.command = new SqlCommand();
 
                 this.command.CommandType = CommandType.Text;
-                this.command.CommandText = $"SELECT * FROM dbo.UsuariosDB WHERE Usuario='{usuario}' AND Contraseña='{contraseña}'";
+                this.command.CommandText = $"SELECT * FROM dbo.UsuariosDB WHERE Usuario='{usuarioIngresado.Usuario}' AND Contraseña='{usuarioIngresado.Contraseña}'";
                 this.command.Connection = this.connection;
 
                 this.connection.Open();
@@ -65,6 +56,7 @@ namespace Biblioteca_de_clases
                 if(this.reader.Read())
                 {
                     usuarioLogeado = new(reader.GetString(1), reader.GetString(2), reader.GetInt32(3), reader.GetInt32(4), reader.GetInt32(5), reader.GetDateTime(6));
+                    usuarioLogeado.Id = reader.GetInt32(0);
                 }
 
                 reader.Close();
@@ -84,52 +76,50 @@ namespace Biblioteca_de_clases
             return usuarioLogeado;
         }
 
-        public int CrearUsuario(string usuario, string contraseña, string repetirContraseña)
+        public int CrearNuevo(Usuarios usuarioNuevo)
         {
             int retorno = -1;
 
-            if(contraseña == repetirContraseña)
+            try
             {
-                try
+                this.command = new SqlCommand();
+
+                this.command.CommandType = CommandType.Text;
+                this.command.CommandText = $"SELECT * FROM dbo.UsuariosDB WHERE Usuario='{usuarioNuevo.Usuario}'";
+                this.command.Connection = this.connection;
+
+                this.connection.Open();
+
+                this.reader = this.command.ExecuteReader();
+
+                if(!this.reader.Read())
                 {
-                    this.command = new SqlCommand();
-
-                    this.command.CommandType = CommandType.Text;
-                    this.command.CommandText = $"SELECT * FROM dbo.UsuariosDB WHERE Usuario='{usuario}'";
-                    this.command.Connection = this.connection;
-
-                    this.connection.Open();
-
-                    this.reader = this.command.ExecuteReader();
-
-                    if(!this.reader.Read())
-                    {
-                        this.reader.Close();
-                        this.command.CommandText = $"INSERT INTO dbo.UsuariosDB (Usuario,Contraseña) VALUES ('{usuario}','{contraseña}')";
-                        retorno = this.command.ExecuteNonQuery();
-                    }
-                    else
-                    {
-                        this.reader.Close();
-                    }
+                    this.reader.Close();
+                    this.command.CommandText = $"INSERT INTO dbo.UsuariosDB (Usuario,Contraseña) VALUES ('{usuarioNuevo.Usuario}','{usuarioNuevo.Contraseña}')";
+                    retorno = this.command.ExecuteNonQuery();
                 }
-                catch (Exception)
+                else
                 {
-                    retorno = -1;
-                }
-                finally
-                {
-                    if (this.connection.State == ConnectionState.Open)
-                    {
-                        this.connection.Close();
-                    }
+                    this.reader.Close();
                 }
             }
+            catch (Exception)
+            {
+                retorno = -1;
+            }
+            finally
+            {
+                if (this.connection.State == ConnectionState.Open)
+                {
+                    this.connection.Close();
+                }
+            }
+            
 
             return retorno;
         }
 
-        public int ActualizarUsuario(Usuarios usuario)
+        public int Actualizar(Usuarios usuario)
         {
             int retorno = -1;
 

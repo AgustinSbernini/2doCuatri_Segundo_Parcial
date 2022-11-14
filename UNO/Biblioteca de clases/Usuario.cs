@@ -8,6 +8,7 @@ namespace Biblioteca_de_clases
 {
     public class Usuarios
     {
+        private int id;
         private string usuario;
         private string contraseña;
         private int partidasGanadas;
@@ -55,6 +56,7 @@ namespace Biblioteca_de_clases
         }
         public DateTime UltimoLogeo { get => ultimoLogeo; set => ultimoLogeo = value; }
         public List<Cartas> CartasEnMano { get => cartasEnMano; set => cartasEnMano = value; }
+        public int Id { get => id; set => id = value; }
 
         public override string ToString()
         {
@@ -71,7 +73,10 @@ namespace Biblioteca_de_clases
 
         public static Usuarios operator +(Usuarios usuario, Cartas carta)
         {
-            usuario.cartasEnMano.Add(carta);
+            if(!usuario.cartasEnMano.Contains(carta))
+            {
+                usuario.cartasEnMano.Add(carta);
+            }
 
             return usuario;
         }

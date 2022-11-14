@@ -10,32 +10,15 @@ namespace Probar
 {
     class Program
     {
-        private static void taskNuevas()
-        {
-            for (int i = 0; i < 100; i++)
-            {
-                Thread.Sleep(1000);
-                Console.WriteLine($"ID tasK: {Task.CurrentId} numero i: {i}");
-            }
-        }
+
         static void Main(string[] args)
         {
-            Task.Run(() => 
-            {
-                Program.taskNuevas();
-            });
-            Thread.Sleep(500);
-            Task.Run(() =>
-            {
-                Program.taskNuevas();
-            });
-            Thread.Sleep(500);
-            Task.Run(() =>
-            {
-                Program.taskNuevas();
-            });
+            DateTime final = DateTime.Now;
+            DateTime inicio = new DateTime(2022, 11, 13);
+            TimeSpan resultado = (final - inicio);
 
-            Console.ReadLine();
+            Console.WriteLine($"00:{resultado.Minutes}:{resultado.Seconds}");
+            
             /*
             Cartas cartaAux = new(1,Colores.Rojo);
             Cartas cartaAux1 = new(2, Colores.Rojo);
