@@ -17,31 +17,34 @@ Durante la realización del mismo aprendí el manejo de base de datos, de excepc
 <h2 class="code-line" data-line-start=14 data-line-end=15 ><a id="Diagrama_de_Clases_14"></a>Diagrama de Clases</h2>
 <h2 class="code-line" data-line-start=16 data-line-end=18 ><a id="Diagrama_de_Clasespnghttpswwwdropboxcomspgldusefgm5lhxrDiagrama20de20clasespngdl0raw1_16"></a><img src="https://www.dropbox.com/s/pgldusefgm5lhxr/Diagrama%20de%20clases.png?dl=0&amp;raw=1" alt="Diagrama de Clases.png"></h2>
 <ul>
-<li class="has-line-data" data-line-start="18" data-line-end="20">
+<li class="has-line-data" data-line-start="18" data-line-end="19">
 <p class="has-line-data" data-line-start="18" data-line-end="19"><em>Tema Excepciones:</em> Se utiliza principalmente en la base de datos que es la mas propensa a causar errores y en el label de la carta mesa ya que a veces se intenta cambiar la imagen sin un index del listbox.</p>
 </li>
-<li class="has-line-data" data-line-start="20" data-line-end="22">
-<p class="has-line-data" data-line-start="20" data-line-end="21"><em>Tema SQL:</em> Se utiliza para guardar la base de datos de los usuarios registrados con sus estadisticas y de las partidas generadas con toda su informacion. Al ir modificando de manera dinamica esta inforamción la base de datos fue más útil que la serialización.</p>
+<li class="has-line-data" data-line-start="19" data-line-end="21">
+<p class="has-line-data" data-line-start="19" data-line-end="20"><em>Tema Unit Test:</em> Se utiiliza para confirmar que las funciones esenciales del proyecto funcionan correctamente. Es importante que no presenten fallas ya que se utilizan reiteradas veces a lo largo de todo el proyecto.</p>
 </li>
-<li class="has-line-data" data-line-start="22" data-line-end="24">
-<p class="has-line-data" data-line-start="22" data-line-end="23"><em>Tema Generics e Interfaces:</em> Junto ambos conceptos para utilizarlos en el manejo de base de datos ya que tanto en el caso de Partidas como de Usuarios hago un Select, un Insert y un Update. Gracias a las interfaces puedo mantener una firma para que sea claro que en ambos casos realizo la misma acción y gracias a Generics puedo cambiar los parametros y los retornos correspondiendo a cada clase</p>
+<li class="has-line-data" data-line-start="21" data-line-end="23">
+<p class="has-line-data" data-line-start="21" data-line-end="22"><em>Tema SQL:</em> Se utiliza para guardar la base de datos de los usuarios registrados con sus estadisticas y de las partidas generadas con toda su informacion. Al ir modificando de manera dinamica esta inforamción la base de datos fue más útil que la serialización.</p>
 </li>
-<li class="has-line-data" data-line-start="24" data-line-end="26">
-<p class="has-line-data" data-line-start="24" data-line-end="25"><em>Tema Serializacion:</em> Fue útil para guardar la información de las cartas, ya que este no va a variar en ningún momento me permitió recolectar el mazo de cartas de manera sencilla con una función y más liviana gracias al formato Json.</p>
+<li class="has-line-data" data-line-start="23" data-line-end="25">
+<p class="has-line-data" data-line-start="23" data-line-end="24"><em>Tema Generics e Interfaces:</em> Junto ambos conceptos para utilizarlos en el manejo de base de datos ya que tanto en el caso de Partidas como de Usuarios hago un Select, un Insert y un Update. Gracias a las interfaces puedo mantener una firma para que sea claro que en ambos casos realizo la misma acción y gracias a Generics puedo cambiar los parametros y los retornos correspondiendo a cada clase</p>
 </li>
-<li class="has-line-data" data-line-start="26" data-line-end="28">
-<p class="has-line-data" data-line-start="26" data-line-end="27"><em>Tema Escritura de Archivos:</em> La aplicación permite al usuario descargar la información del usuario que desee o descargar el historial de la partida que seleccione. También esta usado implicitamente en serialización ya que en caso de no existir el archivo con las cartas genera uno nuevo.</p>
+<li class="has-line-data" data-line-start="25" data-line-end="27">
+<p class="has-line-data" data-line-start="25" data-line-end="26"><em>Tema Serializacion:</em> Fue útil para guardar la información de las cartas, ya que este no va a variar en ningún momento me permitió recolectar el mazo de cartas de manera sencilla con una función y más liviana gracias al formato Json.</p>
 </li>
-<li class="has-line-data" data-line-start="28" data-line-end="30">
-<p class="has-line-data" data-line-start="28" data-line-end="29"><em>Tema Delegados y Eventos:</em> Los utilizo para transmitir información de un formulario a otro. Dentro del form de la partida le transmito al form historial cada carta que se va tirando y el efecto que esta genera en la partida, también desde el form de la partida recolecto el color al cual elige cambiar el usuario.</p>
+<li class="has-line-data" data-line-start="27" data-line-end="29">
+<p class="has-line-data" data-line-start="27" data-line-end="28"><em>Tema Escritura de Archivos:</em> La aplicación permite al usuario descargar la información del usuario que desee o descargar el historial de la partida que seleccione. También esta usado implicitamente en serialización ya que en caso de no existir el archivo con las cartas genera uno nuevo.</p>
 </li>
-<li class="has-line-data" data-line-start="30" data-line-end="32">
-<p class="has-line-data" data-line-start="30" data-line-end="31"><em>Tema Task:</em> Se utilizó para crear las partidas y que fueran independientes entre ellas. Aunque su uso más escencial fue en la lógica de los bots ya que permitió poder agregar un contador y hacerlos esperar para que el juego sea más dinámico y entendible, permitiendo además que el usuario pueda seguir interactuando con el formulario sin que este se trabe.</p>
+<li class="has-line-data" data-line-start="29" data-line-end="31">
+<p class="has-line-data" data-line-start="29" data-line-end="30"><em>Tema Delegados y Eventos:</em> Los utilizo para transmitir información de un formulario a otro. Dentro del form de la partida le transmito al form historial cada carta que se va tirando y el efecto que esta genera en la partida, también desde el form de la partida recolecto el color al cual elige cambiar el usuario.</p>
+</li>
+<li class="has-line-data" data-line-start="31" data-line-end="33">
+<p class="has-line-data" data-line-start="31" data-line-end="32"><em>Tema Task:</em> Se utilizó para crear las partidas y que fueran independientes entre ellas. Aunque su uso más escencial fue en la lógica de los bots ya que permitió poder agregar un contador y hacerlos esperar para que el juego sea más dinámico y entendible, permitiendo además que el usuario pueda seguir interactuando con el formulario sin que este se trabe.</p>
 </li>
 </ul>
 <hr>
-<h3 class="code-line" data-line-start=33 data-line-end=34 ><a id="Los_usuarios_y_contraseas_disponibles_para_logear_son_33"></a>Los usuarios y contraseñas disponibles para logear son:</h3>
-<h5 class="code-line" data-line-start=34 data-line-end=35 ><a id="Usuario_Auxiliar____Password_asdasd_34"></a>Usuario: Auxiliar  -  Password: asdasd</h5>
-<h5 class="code-line" data-line-start=35 data-line-end=36 ><a id="Usuario_Agustin____Password_agus123_35"></a>Usuario: Agustin  -  Password: agus123</h5>
-<h6 class="code-line" data-line-start=36 data-line-end=37 ><a id="Tiene_la_opcion_diponible_de_crear_su_propio_usuario_36"></a>Tiene la opcion diponible de crear su propio usuario</h6>
+<h3 class="code-line" data-line-start=34 data-line-end=35 ><a id="Los_usuarios_y_contraseas_disponibles_para_logear_son_34"></a>Los usuarios y contraseñas disponibles para logear son:</h3>
+<h5 class="code-line" data-line-start=35 data-line-end=36 ><a id="Usuario_Auxiliar____Password_asdasd_35"></a>Usuario: Auxiliar  -  Password: asdasd</h5>
+<h5 class="code-line" data-line-start=36 data-line-end=37 ><a id="Usuario_Agustin____Password_agus123_36"></a>Usuario: Agustin  -  Password: agus123</h5>
+<h6 class="code-line" data-line-start=37 data-line-end=38 ><a id="Tiene_la_opcion_diponible_de_crear_su_propio_usuario_37"></a>Tiene la opcion diponible de crear su propio usuario</h6>
 <hr>

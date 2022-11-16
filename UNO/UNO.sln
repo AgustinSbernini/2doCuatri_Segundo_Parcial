@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Biblioteca de clases", "Bib
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Forms", "Forms\Forms.csproj", "{77576D53-ECD7-4433-A4B2-1ADD6EDCA707}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestUNO", "UnitTestUNO\UnitTestUNO.csproj", "{C4B253E3-EFD3-4501-81D8-4B9F0509E18D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{77576D53-ECD7-4433-A4B2-1ADD6EDCA707}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{77576D53-ECD7-4433-A4B2-1ADD6EDCA707}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{77576D53-ECD7-4433-A4B2-1ADD6EDCA707}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4B253E3-EFD3-4501-81D8-4B9F0509E18D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4B253E3-EFD3-4501-81D8-4B9F0509E18D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4B253E3-EFD3-4501-81D8-4B9F0509E18D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4B253E3-EFD3-4501-81D8-4B9F0509E18D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

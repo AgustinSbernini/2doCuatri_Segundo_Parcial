@@ -236,7 +236,8 @@ namespace Forms
                             this.lstManoCartas.Items.Add(carta);
                         }
 
-                        // Sigue con la logica del juego
+                        // Sigue con la logica del juego al sentido del reloj le toca al jugador siguiente
+                        // sino le toca al jugador anterior
                         partidaEnJuego(rondaSentidoReloj ? 1 : 3);
                     }
                 }
