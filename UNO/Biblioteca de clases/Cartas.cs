@@ -62,6 +62,8 @@ namespace Biblioteca_de_clases
             }
             else
             {
+                // Si la cartas son especiales evita comparar por el numero y compara por color o efecto
+                // Si la carta es color negro significa que es un +4 o cambio color, pueden tirarse siempre
                 if(cartaMesa.numero == -1 || cartaMano.numero == -1)
                 {
                     if (cartaMano.color == Colores.Negro || cartaMano.color == cartaMesa.color || cartaMano.efecto == cartaMesa.efecto || cartaMesa.colorCambiado == cartaMano.color)
@@ -87,10 +89,12 @@ namespace Biblioteca_de_clases
 
         public static void cambioColor(Cartas cartaMesa, Colores nuevoColor)
         {
+            // Cambia el color de la carta de la mesa
             cartaMesa.colorCambiado = nuevoColor;
         }
         public static void cambioColor(Cartas cartaMesa, out Colores colorElegido)
         {
+            // Sobre carga donde Cambia el color de la carta de la mesa al azar
             Random random = new();
             Colores colorRandom;
 
@@ -143,6 +147,7 @@ namespace Biblioteca_de_clases
             StreamReader streamReader;
             string cartaString;
 
+            // Si el archivo existe entonces lo deserealiza agregando la imagen de cada carta
             if (File.Exists("Cartas.json"))
             {
                 streamReader = File.OpenText("Cartas.json");
@@ -157,6 +162,7 @@ namespace Biblioteca_de_clases
             }
             else
             {
+                // Si no existe el archivo lo crea
                 StreamWriter streamWriter = new StreamWriter("Cartas.json", true);
                 string jsonString;
                 Cartas cartaAux;
@@ -165,6 +171,7 @@ namespace Biblioteca_de_clases
                 {
                     if (color != Colores.Negro)
                     {
+                        // Donde hay 19 cartas de cada color en numeros (un 0 y dos del 1-9)
                         for (int i = 0; i < 10; i++)
                         {
                             if (i == 0)
@@ -185,7 +192,7 @@ namespace Biblioteca_de_clases
                                 }
                             }
                         }
-
+                        // 2 cartas por cada color de efectos especiales
                         for (int j = 0; j < 2; j++)
                         {
                             cartaAux = new(Efectos.RobaDos, color);
@@ -206,6 +213,7 @@ namespace Biblioteca_de_clases
                     }
                     else
                     {
+                        // Cuatro +4 y cambia color
                         for (int i = 0; i < 4; i++)
                         {
                             cartaAux = new(Efectos.RobaCuatro);
@@ -232,6 +240,7 @@ namespace Biblioteca_de_clases
 
         public static void RepartirCarta(Usuarios usuario, List<Cartas> mazo)
         {
+            // Quita una carta al azar del mazo y se la suma al usuario
             int numero;
             Random random = new();
             if(mazo.Count > 0)
@@ -244,6 +253,7 @@ namespace Biblioteca_de_clases
 
         public static Cartas RepartirCarta(List<Cartas> mazo)
         {
+            // reparte la primer carta a la mesa
             int numero;
             Random random = new();
             Cartas cartaAux = null;
@@ -260,6 +270,7 @@ namespace Biblioteca_de_clases
 
         public static bool RellenarMazo(List<Cartas> mazo, List<Cartas> cartasJugadas)
         {
+            // En caso de quedar pocas cartas en el mazo lo recarga con las cartas jugadas
             bool retorno = false;
 
             if(mazo is not null && cartasJugadas is not null)

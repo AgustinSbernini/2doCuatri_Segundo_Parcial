@@ -73,10 +73,7 @@ namespace Biblioteca_de_clases
 
         public static Usuarios operator +(Usuarios usuario, Cartas carta)
         {
-            if(!usuario.cartasEnMano.Contains(carta))
-            {
-                usuario.cartasEnMano.Add(carta);
-            }
+            usuario.cartasEnMano.Add(carta);
 
             return usuario;
         }

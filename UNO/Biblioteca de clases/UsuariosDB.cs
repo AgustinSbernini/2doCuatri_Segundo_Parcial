@@ -12,7 +12,7 @@ namespace Biblioteca_de_clases
     {
         public UsuariosDB() : base()
         {
-            this.connection = new SqlConnection(UsuariosDB.stringConnection);
+            this.connection = new SqlConnection(DataBases.stringConnection);
         }
         public bool ProbarConexion()
         {
@@ -53,7 +53,7 @@ namespace Biblioteca_de_clases
 
                 this.reader = this.command.ExecuteReader();
 
-                if(this.reader.Read())
+                if (this.reader.Read())
                 {
                     usuarioLogeado = new(reader.GetString(1), reader.GetString(2), reader.GetInt32(3), reader.GetInt32(4), reader.GetInt32(5), reader.GetDateTime(6));
                     usuarioLogeado.Id = reader.GetInt32(0);
@@ -61,7 +61,7 @@ namespace Biblioteca_de_clases
 
                 reader.Close();
             }
-            catch(Exception)
+            catch (Exception)
             {
                 usuarioLogeado = null;
             }
@@ -92,10 +92,10 @@ namespace Biblioteca_de_clases
 
                 this.reader = this.command.ExecuteReader();
 
-                if(!this.reader.Read())
+                if (!this.reader.Read())
                 {
                     this.reader.Close();
-                    this.command.CommandText = $"INSERT INTO dbo.UsuariosDB (Usuario,Contraseña) VALUES ('{usuarioNuevo.Usuario}','{usuarioNuevo.Contraseña}')";
+                    this.command.CommandText = $"INSERT INTO dbo.UsuariosDB VALUES ('{usuarioNuevo.Usuario}','{usuarioNuevo.Contraseña}',{usuarioNuevo.PartidasGanadas},{usuarioNuevo.PartidasJugadas},{usuarioNuevo.Winrate},'{usuarioNuevo.UltimoLogeo.ToString("yyyy-MM-dd HH:mm:ss")}')";
                     retorno = this.command.ExecuteNonQuery();
                 }
                 else
@@ -103,7 +103,7 @@ namespace Biblioteca_de_clases
                     this.reader.Close();
                 }
             }
-            catch (Exception)
+            catch (Exception e)
             {
                 retorno = -1;
             }
@@ -114,7 +114,7 @@ namespace Biblioteca_de_clases
                     this.connection.Close();
                 }
             }
-            
+
 
             return retorno;
         }
@@ -123,19 +123,18 @@ namespace Biblioteca_de_clases
         {
             int retorno = -1;
 
-            if(usuario is not null)
+            if (usuario is not null)
             {
                 try
                 {
                     this.command = new SqlCommand();
-                    string ultimoLogeo = $"{usuario.UltimoLogeo.Year}-{usuario.UltimoLogeo.Month}-{usuario.UltimoLogeo.Day}";
                     this.command.CommandType = CommandType.Text;
-                    this.command.CommandText = $"UPDATE dbo.UsuariosDB SET PartidasGanadas = {usuario.PartidasGanadas}, PartidasJugadas = {usuario.PartidasJugadas}, Winrate = {usuario.Winrate}, UltimoLogeo = '{ultimoLogeo}' WHERE Usuario = '{usuario.Usuario}'";
+                    this.command.CommandText = $"UPDATE dbo.UsuariosDB SET PartidasGanadas = {usuario.PartidasGanadas}, PartidasJugadas = {usuario.PartidasJugadas}, Winrate = {usuario.Winrate}, UltimoLogeo = '{usuario.UltimoLogeo.ToString("yyyy-MM-dd HH:mm:ss")}' WHERE Usuario = '{usuario.Usuario}'";
                     this.command.Connection = this.connection;
 
                     this.connection.Open();
 
-                    retorno = this.command.ExecuteNonQuery();                
+                    retorno = this.command.ExecuteNonQuery();
                 }
                 catch (Exception)
                 {
@@ -151,6 +150,47 @@ namespace Biblioteca_de_clases
             }
 
             return retorno;
+        }
+
+        public List<Usuarios> DevolverLista()
+        {
+            List<Usuarios> listaUsuario = new();
+
+            try
+            {
+                this.command = new SqlCommand();
+
+                this.command.CommandType = CommandType.Text;
+                this.command.CommandText = $"SELECT * FROM dbo.UsuariosDB ORDER BY -Winrate";
+                this.command.Connection = this.connection;
+
+                this.connection.Open();
+
+                this.reader = this.command.ExecuteReader();
+
+                while (this.reader.Read())
+                {
+                    Usuarios usuarioAux = new(reader.GetString(1), reader.GetString(2), reader.GetInt32(3), reader.GetInt32(4), reader.GetInt32(5), reader.GetDateTime(6));
+                    usuarioAux.Id = reader.GetInt32(0);
+
+                    listaUsuario.Add(usuarioAux);
+                }
+
+                reader.Close();
+            }
+            catch (Exception)
+            {
+                listaUsuario = null;
+            }
+            finally
+            {
+                if (this.connection.State == ConnectionState.Open)
+                {
+                    this.connection.Close();
+                }
+            }
+
+            return listaUsuario;
         }
     }
 }

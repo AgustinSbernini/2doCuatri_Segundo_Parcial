@@ -45,7 +45,7 @@ namespace Forms
             this.lblUsuario.BackColor = System.Drawing.Color.Black;
             this.lblUsuario.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblUsuario.ForeColor = System.Drawing.Color.White;
-            this.lblUsuario.Location = new System.Drawing.Point(12, 35);
+            this.lblUsuario.Location = new System.Drawing.Point(87, 51);
             this.lblUsuario.Name = "lblUsuario";
             this.lblUsuario.Size = new System.Drawing.Size(84, 28);
             this.lblUsuario.TabIndex = 0;
@@ -57,7 +57,7 @@ namespace Forms
             this.lblContraseña.BackColor = System.Drawing.Color.Black;
             this.lblContraseña.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblContraseña.ForeColor = System.Drawing.Color.White;
-            this.lblContraseña.Location = new System.Drawing.Point(12, 139);
+            this.lblContraseña.Location = new System.Drawing.Point(87, 151);
             this.lblContraseña.Name = "lblContraseña";
             this.lblContraseña.Size = new System.Drawing.Size(114, 28);
             this.lblContraseña.TabIndex = 1;
@@ -68,7 +68,8 @@ namespace Forms
             this.txtUsuario.BackColor = System.Drawing.Color.Black;
             this.txtUsuario.Font = new System.Drawing.Font("Comic Sans MS", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtUsuario.ForeColor = System.Drawing.Color.White;
-            this.txtUsuario.Location = new System.Drawing.Point(12, 82);
+            this.txtUsuario.Location = new System.Drawing.Point(87, 100);
+            this.txtUsuario.MaxLength = 19;
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(200, 33);
             this.txtUsuario.TabIndex = 2;
@@ -78,7 +79,8 @@ namespace Forms
             this.txtContraseña.BackColor = System.Drawing.Color.Black;
             this.txtContraseña.Font = new System.Drawing.Font("Comic Sans MS", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtContraseña.ForeColor = System.Drawing.Color.White;
-            this.txtContraseña.Location = new System.Drawing.Point(12, 188);
+            this.txtContraseña.Location = new System.Drawing.Point(87, 196);
+            this.txtContraseña.MaxLength = 19;
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.Size = new System.Drawing.Size(200, 33);
             this.txtContraseña.TabIndex = 3;
@@ -103,7 +105,7 @@ namespace Forms
             this.lblRepetirContraseña.BackColor = System.Drawing.Color.Black;
             this.lblRepetirContraseña.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblRepetirContraseña.ForeColor = System.Drawing.Color.White;
-            this.lblRepetirContraseña.Location = new System.Drawing.Point(12, 236);
+            this.lblRepetirContraseña.Location = new System.Drawing.Point(87, 251);
             this.lblRepetirContraseña.Name = "lblRepetirContraseña";
             this.lblRepetirContraseña.Size = new System.Drawing.Size(200, 28);
             this.lblRepetirContraseña.TabIndex = 5;
@@ -114,7 +116,8 @@ namespace Forms
             this.txtRepetirContraseña.BackColor = System.Drawing.Color.Black;
             this.txtRepetirContraseña.Font = new System.Drawing.Font("Comic Sans MS", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtRepetirContraseña.ForeColor = System.Drawing.Color.White;
-            this.txtRepetirContraseña.Location = new System.Drawing.Point(12, 282);
+            this.txtRepetirContraseña.Location = new System.Drawing.Point(87, 301);
+            this.txtRepetirContraseña.MaxLength = 19;
             this.txtRepetirContraseña.Name = "txtRepetirContraseña";
             this.txtRepetirContraseña.Size = new System.Drawing.Size(200, 33);
             this.txtRepetirContraseña.TabIndex = 6;

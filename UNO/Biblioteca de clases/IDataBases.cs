@@ -14,6 +14,6 @@ namespace Biblioteca_de_clases
 
         int Actualizar(T objeto);
 
-
+        List<T> DevolverLista();
     }
 }
