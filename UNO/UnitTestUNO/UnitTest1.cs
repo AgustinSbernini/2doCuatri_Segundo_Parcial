@@ -12,7 +12,7 @@ namespace UnitTestUNO
         {
             List<Cartas> mazo = Cartas.MazoDeCartas();
 
-            Assert.Equals(108, mazo.Count);
+            Assert.AreEqual(108, mazo.Count);
         }
 
         [TestMethod]
@@ -27,7 +27,7 @@ namespace UnitTestUNO
             Cartas.RepartirCarta(user, mazo);
             Cartas.RepartirCarta(user, mazo);
 
-            Assert.Equals(user.CartasEnMano.Count, 5);
+            Assert.AreEqual(user.CartasEnMano.Count, 5);
         }
 
         [TestMethod]
@@ -48,8 +48,8 @@ namespace UnitTestUNO
 
             Cartas.RellenarMazo(mazoVacio, mazoLleno);
 
-            Assert.Equals(mazoVacio.Count, 108);
-            Assert.Equals(mazoLleno.Count, 0);
+            Assert.AreEqual(mazoVacio.Count, 108);
+            Assert.AreEqual(mazoLleno.Count, 0);
         }
 
         [TestMethod]
@@ -60,7 +60,7 @@ namespace UnitTestUNO
 
             user += cartaNuevo;
 
-            Assert.Equals(user.CartasEnMano[0], cartaNuevo);
+            Assert.AreEqual(user.CartasEnMano[0], cartaNuevo);
         }
 
     }
